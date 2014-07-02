@@ -1,5 +1,5 @@
 class HomeScreen < PM::Screen
-  title "Home"
+  title "Scan invoice"
 
   def on_load
     # After view is first loaded

@@ -6,10 +6,10 @@ gem "rake"
 gem "ProMotion", "2.0.0.rc3"
 
 # Awesome gem that adds a ton of helpers.
-# gem "sugarcube", require: [ "sugarcube/common" ]
+gem "sugarcube", require: ["sugarcube", "sugarcube-color", "sugarcube-uikit", "sugarcube-events", "sugarcube-repl", "sugarcube-constants"]
 
 # Layout and styling gem
-# gem "motion-kit", "~> 0.10"
+gem "motion-kit", "~> 0.10"
 
 # Front end toolkit
 # gem "ruby_motion_query", "~> 0.5"

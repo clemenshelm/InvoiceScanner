@@ -3,13 +3,19 @@ GEM
   specs:
     ProMotion (2.0.0.rc3)
       methadone (~> 1.4)
+    dbt (1.1.5)
     methadone (1.4.0)
       bundler
+    motion-kit (0.10.8)
+      dbt (~> 1.1.5)
     rake (10.3.2)
+    sugarcube (1.6.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   ProMotion (= 2.0.0.rc3)
+  motion-kit (~> 0.10)
   rake
+  sugarcube
