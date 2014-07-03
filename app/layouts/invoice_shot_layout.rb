@@ -11,7 +11,7 @@ class InvoiceShotLayout < MK::Layout
     @pins = PIN_POSITIONS.each_with_index.map do |position, index|
       add UIButton, "pin#{index}" do
         frame [position, [20, 20]]
-        background_color "#F9F9F9".uicolor
+        background_color QuadView::COLOR
       end
     end
   end

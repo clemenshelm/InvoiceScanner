@@ -10,11 +10,11 @@ class InvoiceShotScreen < PM::Screen
       pin.on(:touch_drag_inside, :touch_drag_outside) do |pin, event|
         touch = event.allTouches.anyObject
         pin.center = touch.locationInView(view)
-
-        pin.backgroundColor = :red.uicolor
         update_quad
       end
     end
+
+    update_quad
   end
 
   def update_quad

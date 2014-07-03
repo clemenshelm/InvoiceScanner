@@ -10,6 +10,7 @@ GEM
       dbt (~> 1.1.5)
     rake (10.3.2)
     sugarcube (1.6.3)
+    vector2d (2.0.2)
 
 PLATFORMS
   ruby
@@ -19,3 +20,4 @@ DEPENDENCIES
   motion-kit (~> 0.10)
   rake
   sugarcube
+  vector2d (~> 2.0.2)

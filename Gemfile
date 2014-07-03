@@ -11,6 +11,9 @@ gem "sugarcube", require: ["sugarcube", "sugarcube-color", "sugarcube-uikit", "s
 # Layout and styling gem
 gem "motion-kit", "~> 0.10"
 
+# Cool vector magic
+gem 'vector2d', '~> 2.0.2'
+
 # Front end toolkit
 # gem "ruby_motion_query", "~> 0.5"
 
