@@ -22,6 +22,7 @@ class InvoiceShotScreen < PM::Screen
   end
 
   def crop
+    PerspectiveCorrection.alloc.initWithImage @layout.get(:invoice_image).image
     PM.logger.info "Cropping invoice"
   end
 end

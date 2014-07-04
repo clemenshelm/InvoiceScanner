@@ -1,0 +1,2524 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<struct name='CvAttrList' type='{CvAttrList=&quot;attr&quot;^*&quot;next&quot;^{CvAttrList}}'>
+<field const='true' declared_type='char**' name='attr' type='^*'/>
+<field declared_type='struct CvAttrList*' name='next' type='^{CvAttrList=^*^{CvAttrList}}'/>
+</struct>
+<struct name='CvBox2D' type='{CvBox2D=&quot;center&quot;{CvPoint2D32f=&quot;x&quot;f&quot;y&quot;f}&quot;size&quot;{CvSize2D32f=&quot;width&quot;f&quot;height&quot;f}&quot;angle&quot;f}'>
+<field declared_type='CvPoint2D32f' name='center' type='{CvPoint2D32f=&quot;x&quot;f&quot;y&quot;f}'/>
+<field declared_type='CvSize2D32f' name='size' type='{CvSize2D32f=&quot;width&quot;f&quot;height&quot;f}'/>
+<field declared_type='float' name='angle' type='f'/>
+</struct>
+<struct name='CvChain' type='{CvChain=&quot;flags&quot;i&quot;header_size&quot;i&quot;h_prev&quot;^{CvSeq}&quot;h_next&quot;^{CvSeq}&quot;v_prev&quot;^{CvSeq}&quot;v_next&quot;^{CvSeq}&quot;total&quot;i&quot;elem_size&quot;i&quot;block_max&quot;*&quot;ptr&quot;*&quot;delta_elems&quot;i&quot;storage&quot;^{CvMemStorage}&quot;free_blocks&quot;^{CvSeqBlock}&quot;first&quot;^{CvSeqBlock}&quot;origin&quot;{CvPoint=&quot;x&quot;i&quot;y&quot;i}}'>
+<field declared_type='int' name='flags' type='i'/>
+<field declared_type='int' name='header_size' type='i'/>
+<field declared_type='struct CvSeq*' name='h_prev' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+<field declared_type='struct CvSeq*' name='h_next' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+<field declared_type='struct CvSeq*' name='v_prev' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+<field declared_type='struct CvSeq*' name='v_next' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+<field declared_type='int' name='total' type='i'/>
+<field declared_type='int' name='elem_size' type='i'/>
+<field declared_type='schar*' name='block_max' type='*'/>
+<field declared_type='schar*' name='ptr' type='*'/>
+<field declared_type='int' name='delta_elems' type='i'/>
+<field declared_type='CvMemStorage*' name='storage' type='^{CvMemStorage=i^{CvMemBlock}^{CvMemBlock}^{CvMemStorage}ii}'/>
+<field declared_type='CvSeqBlock*' name='free_blocks' type='^{CvSeqBlock=^{CvSeqBlock}^{CvSeqBlock}ii*}'/>
+<field declared_type='CvSeqBlock*' name='first' type='^{CvSeqBlock=^{CvSeqBlock}^{CvSeqBlock}ii*}'/>
+<field declared_type='CvPoint' name='origin' type='{CvPoint=&quot;x&quot;i&quot;y&quot;i}'/>
+</struct>
+<struct name='CvContour' type='{CvContour=&quot;flags&quot;i&quot;header_size&quot;i&quot;h_prev&quot;^{CvSeq}&quot;h_next&quot;^{CvSeq}&quot;v_prev&quot;^{CvSeq}&quot;v_next&quot;^{CvSeq}&quot;total&quot;i&quot;elem_size&quot;i&quot;block_max&quot;*&quot;ptr&quot;*&quot;delta_elems&quot;i&quot;storage&quot;^{CvMemStorage}&quot;free_blocks&quot;^{CvSeqBlock}&quot;first&quot;^{CvSeqBlock}&quot;rect&quot;{CvRect=&quot;x&quot;i&quot;y&quot;i&quot;width&quot;i&quot;height&quot;i}&quot;color&quot;i&quot;reserved&quot;[3i]}'>
+<field declared_type='int' name='flags' type='i'/>
+<field declared_type='int' name='header_size' type='i'/>
+<field declared_type='struct CvSeq*' name='h_prev' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+<field declared_type='struct CvSeq*' name='h_next' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+<field declared_type='struct CvSeq*' name='v_prev' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+<field declared_type='struct CvSeq*' name='v_next' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+<field declared_type='int' name='total' type='i'/>
+<field declared_type='int' name='elem_size' type='i'/>
+<field declared_type='schar*' name='block_max' type='*'/>
+<field declared_type='schar*' name='ptr' type='*'/>
+<field declared_type='int' name='delta_elems' type='i'/>
+<field declared_type='CvMemStorage*' name='storage' type='^{CvMemStorage=i^{CvMemBlock}^{CvMemBlock}^{CvMemStorage}ii}'/>
+<field declared_type='CvSeqBlock*' name='free_blocks' type='^{CvSeqBlock=^{CvSeqBlock}^{CvSeqBlock}ii*}'/>
+<field declared_type='CvSeqBlock*' name='first' type='^{CvSeqBlock=^{CvSeqBlock}^{CvSeqBlock}ii*}'/>
+<field declared_type='CvRect' name='rect' type='{CvRect=&quot;x&quot;i&quot;y&quot;i&quot;width&quot;i&quot;height&quot;i}'/>
+<field declared_type='int' name='color' type='i'/>
+<field declared_type='int*' name='reserved' type='[3i]'/>
+</struct>
+<struct name='CvFileNode' type='{CvFileNode=&quot;tag&quot;i&quot;info&quot;^{CvTypeInfo}&quot;data&quot;(?=&quot;f&quot;d&quot;i&quot;i&quot;str&quot;{CvString=&quot;len&quot;i&quot;ptr&quot;*}&quot;seq&quot;^{CvSeq}&quot;map&quot;^{CvGenericHash})}'>
+<field declared_type='int' name='tag' type='i'/>
+<field declared_type='struct CvTypeInfo*' name='info' type='^{CvTypeInfo=ii^{CvTypeInfo}^{CvTypeInfo}*^?^?^?^?^?}'/>
+<field declared_type='union CvFileNode::' name='data' type='(?=&quot;f&quot;d&quot;i&quot;i&quot;str&quot;{CvString=&quot;len&quot;i&quot;ptr&quot;*}&quot;seq&quot;^{CvSeq}&quot;map&quot;^{CvGenericHash})'/>
+</struct>
+<struct name='CvGraph' type='{CvGraph=&quot;flags&quot;i&quot;header_size&quot;i&quot;h_prev&quot;^{CvSeq}&quot;h_next&quot;^{CvSeq}&quot;v_prev&quot;^{CvSeq}&quot;v_next&quot;^{CvSeq}&quot;total&quot;i&quot;elem_size&quot;i&quot;block_max&quot;*&quot;ptr&quot;*&quot;delta_elems&quot;i&quot;storage&quot;^{CvMemStorage}&quot;free_blocks&quot;^{CvSeqBlock}&quot;first&quot;^{CvSeqBlock}&quot;free_elems&quot;^{CvSetElem}&quot;active_count&quot;i&quot;edges&quot;^{CvSet}}'>
+<field declared_type='int' name='flags' type='i'/>
+<field declared_type='int' name='header_size' type='i'/>
+<field declared_type='struct CvSeq*' name='h_prev' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+<field declared_type='struct CvSeq*' name='h_next' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+<field declared_type='struct CvSeq*' name='v_prev' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+<field declared_type='struct CvSeq*' name='v_next' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+<field declared_type='int' name='total' type='i'/>
+<field declared_type='int' name='elem_size' type='i'/>
+<field declared_type='schar*' name='block_max' type='*'/>
+<field declared_type='schar*' name='ptr' type='*'/>
+<field declared_type='int' name='delta_elems' type='i'/>
+<field declared_type='CvMemStorage*' name='storage' type='^{CvMemStorage=i^{CvMemBlock}^{CvMemBlock}^{CvMemStorage}ii}'/>
+<field declared_type='CvSeqBlock*' name='free_blocks' type='^{CvSeqBlock=^{CvSeqBlock}^{CvSeqBlock}ii*}'/>
+<field declared_type='CvSeqBlock*' name='first' type='^{CvSeqBlock=^{CvSeqBlock}^{CvSeqBlock}ii*}'/>
+<field declared_type='CvSetElem*' name='free_elems' type='^{CvSetElem=i^{CvSetElem}}'/>
+<field declared_type='int' name='active_count' type='i'/>
+<field declared_type='CvSet*' name='edges' type='^{CvSet=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}^{CvSetElem}i}'/>
+</struct>
+<struct name='CvGraphEdge' type='{CvGraphEdge=&quot;flags&quot;i&quot;weight&quot;f&quot;next&quot;[2^{CvGraphEdge}]&quot;vtx&quot;[2^{CvGraphVtx}]}'>
+<field declared_type='int' name='flags' type='i'/>
+<field declared_type='float' name='weight' type='f'/>
+<field declared_type='struct CvGraphEdge**' name='next' type='[2^{CvGraphEdge}]'/>
+<field declared_type='struct CvGraphVtx**' name='vtx' type='[2^{CvGraphVtx}]'/>
+</struct>
+<struct name='CvGraphVtx' type='{CvGraphVtx=&quot;flags&quot;i&quot;first&quot;^{CvGraphEdge}}'>
+<field declared_type='int' name='flags' type='i'/>
+<field declared_type='struct CvGraphEdge*' name='first' type='^{CvGraphEdge=if[2^{CvGraphEdge}][2^{CvGraphVtx}]}'/>
+</struct>
+<struct name='CvGraphVtx2D' type='{CvGraphVtx2D=&quot;flags&quot;i&quot;first&quot;^{CvGraphEdge}&quot;ptr&quot;^{CvPoint2D32f}}'>
+<field declared_type='int' name='flags' type='i'/>
+<field declared_type='struct CvGraphEdge*' name='first' type='^{CvGraphEdge=if[2^{CvGraphEdge}][2^{CvGraphVtx}]}'/>
+<field declared_type='CvPoint2D32f*' name='ptr' type='^{CvPoint2D32f=ff}'/>
+</struct>
+<struct name='CvHistogram' type='{CvHistogram=&quot;type&quot;i&quot;bins&quot;^v&quot;thresh&quot;[32[2f]]&quot;thresh2&quot;^^f&quot;mat&quot;{CvMatND=&quot;type&quot;i&quot;dims&quot;i&quot;refcount&quot;^i&quot;hdr_refcount&quot;i&quot;data&quot;(?=&quot;ptr&quot;*&quot;fl&quot;^f&quot;db&quot;^d&quot;i&quot;^i&quot;s&quot;^s)&quot;dim&quot;[32{?=&quot;size&quot;i&quot;step&quot;i}]}}'>
+<field declared_type='int' name='type' type='i'/>
+<field declared_type='CvArr*' name='bins' type='^v'/>
+<field declared_type='float**' name='thresh' type='[32[2f]]'/>
+<field declared_type='float**' name='thresh2' type='^^f'/>
+<field declared_type='CvMatND' name='mat' type='{CvMatND=&quot;type&quot;i&quot;dims&quot;i&quot;refcount&quot;^i&quot;hdr_refcount&quot;i&quot;data&quot;(?=&quot;ptr&quot;*&quot;fl&quot;^f&quot;db&quot;^d&quot;i&quot;^i&quot;s&quot;^s)&quot;dim&quot;[32{?=&quot;size&quot;i&quot;step&quot;i}]}'/>
+</struct>
+<struct name='CvLineIterator' type='{CvLineIterator=&quot;ptr&quot;*&quot;err&quot;i&quot;plus_delta&quot;i&quot;minus_delta&quot;i&quot;plus_step&quot;i&quot;minus_step&quot;i}'>
+<field declared_type='uchar*' name='ptr' type='*'/>
+<field declared_type='int' name='err' type='i'/>
+<field declared_type='int' name='plus_delta' type='i'/>
+<field declared_type='int' name='minus_delta' type='i'/>
+<field declared_type='int' name='plus_step' type='i'/>
+<field declared_type='int' name='minus_step' type='i'/>
+</struct>
+<struct name='CvMat' type='{CvMat=&quot;type&quot;i&quot;step&quot;i&quot;refcount&quot;^i&quot;hdr_refcount&quot;i&quot;data&quot;(?=&quot;ptr&quot;*&quot;s&quot;^s&quot;i&quot;^i&quot;fl&quot;^f&quot;db&quot;^d)&quot;rows&quot;i&quot;cols&quot;i}'>
+<field declared_type='int' name='type' type='i'/>
+<field declared_type='int' name='step' type='i'/>
+<field declared_type='int*' name='refcount' type='^i'/>
+<field declared_type='int' name='hdr_refcount' type='i'/>
+<field declared_type='union CvMat::' name='data' type='(?=&quot;ptr&quot;*&quot;s&quot;^s&quot;i&quot;^i&quot;fl&quot;^f&quot;db&quot;^d)'/>
+<field declared_type='int' name='rows' type='i'/>
+<field declared_type='int' name='cols' type='i'/>
+</struct>
+<struct name='CvMatND' type='{CvMatND=&quot;type&quot;i&quot;dims&quot;i&quot;refcount&quot;^i&quot;hdr_refcount&quot;i&quot;data&quot;(?=&quot;ptr&quot;*&quot;fl&quot;^f&quot;db&quot;^d&quot;i&quot;^i&quot;s&quot;^s)&quot;dim&quot;[32{?=&quot;size&quot;i&quot;step&quot;i}]}'>
+<field declared_type='int' name='type' type='i'/>
+<field declared_type='int' name='dims' type='i'/>
+<field declared_type='int*' name='refcount' type='^i'/>
+<field declared_type='int' name='hdr_refcount' type='i'/>
+<field declared_type='union CvMatND::' name='data' type='(?=&quot;ptr&quot;*&quot;fl&quot;^f&quot;db&quot;^d&quot;i&quot;^i&quot;s&quot;^s)'/>
+<field declared_type='struct CvMatND::*' name='dim' type='[32{?=&quot;size&quot;i&quot;step&quot;i}]'/>
+</struct>
+<struct name='CvMemBlock' type='{CvMemBlock=&quot;prev&quot;^{CvMemBlock}&quot;next&quot;^{CvMemBlock}}'>
+<field declared_type='struct CvMemBlock*' name='prev' type='^{CvMemBlock=^{CvMemBlock}^{CvMemBlock}}'/>
+<field declared_type='struct CvMemBlock*' name='next' type='^{CvMemBlock=^{CvMemBlock}^{CvMemBlock}}'/>
+</struct>
+<struct name='CvMemStorage' type='{CvMemStorage=&quot;signature&quot;i&quot;bottom&quot;^{CvMemBlock}&quot;top&quot;^{CvMemBlock}&quot;parent&quot;^{CvMemStorage}&quot;block_size&quot;i&quot;free_space&quot;i}'>
+<field declared_type='int' name='signature' type='i'/>
+<field declared_type='CvMemBlock*' name='bottom' type='^{CvMemBlock=^{CvMemBlock}^{CvMemBlock}}'/>
+<field declared_type='CvMemBlock*' name='top' type='^{CvMemBlock=^{CvMemBlock}^{CvMemBlock}}'/>
+<field declared_type='struct CvMemStorage*' name='parent' type='^{CvMemStorage=i^{CvMemBlock}^{CvMemBlock}^{CvMemStorage}ii}'/>
+<field declared_type='int' name='block_size' type='i'/>
+<field declared_type='int' name='free_space' type='i'/>
+</struct>
+<struct name='CvMemStoragePos' type='{CvMemStoragePos=&quot;top&quot;^{CvMemBlock}&quot;free_space&quot;i}'>
+<field declared_type='CvMemBlock*' name='top' type='^{CvMemBlock=^{CvMemBlock}^{CvMemBlock}}'/>
+<field declared_type='int' name='free_space' type='i'/>
+</struct>
+<struct name='CvModuleInfo' type='{CvModuleInfo=&quot;next&quot;^{CvModuleInfo}&quot;name&quot;*&quot;version&quot;*&quot;func_tab&quot;^{CvPluginFuncInfo}}'>
+<field declared_type='struct CvModuleInfo*' name='next' type='^{CvModuleInfo=^{CvModuleInfo}**^{CvPluginFuncInfo}}'/>
+<field const='true' declared_type='char*' name='name' type='*'/>
+<field const='true' declared_type='char*' name='version' type='*'/>
+<field declared_type='CvPluginFuncInfo*' name='func_tab' type='^{CvPluginFuncInfo=^^v^v*ii}'/>
+</struct>
+<struct name='CvPluginFuncInfo' type='{CvPluginFuncInfo=&quot;func_addr&quot;^^v&quot;default_func_addr&quot;^v&quot;func_names&quot;*&quot;search_modules&quot;i&quot;loaded_from&quot;i}'>
+<field declared_type='void**' name='func_addr' type='^^v'/>
+<field declared_type='void*' name='default_func_addr' type='^v'/>
+<field const='true' declared_type='char*' name='func_names' type='*'/>
+<field declared_type='int' name='search_modules' type='i'/>
+<field declared_type='int' name='loaded_from' type='i'/>
+</struct>
+<struct name='CvPoint' type='{CvPoint=&quot;x&quot;i&quot;y&quot;i}'>
+<field declared_type='int' name='x' type='i'/>
+<field declared_type='int' name='y' type='i'/>
+</struct>
+<struct name='CvPoint2D32f' type='{CvPoint2D32f=&quot;x&quot;f&quot;y&quot;f}'>
+<field declared_type='float' name='x' type='f'/>
+<field declared_type='float' name='y' type='f'/>
+</struct>
+<struct name='CvPoint2D64f' type='{CvPoint2D64f=&quot;x&quot;d&quot;y&quot;d}'>
+<field declared_type='double' name='x' type='d'/>
+<field declared_type='double' name='y' type='d'/>
+</struct>
+<struct name='CvPoint2DSeq' type='{CvContour=&quot;flags&quot;i&quot;header_size&quot;i&quot;h_prev&quot;^{CvSeq}&quot;h_next&quot;^{CvSeq}&quot;v_prev&quot;^{CvSeq}&quot;v_next&quot;^{CvSeq}&quot;total&quot;i&quot;elem_size&quot;i&quot;block_max&quot;*&quot;ptr&quot;*&quot;delta_elems&quot;i&quot;storage&quot;^{CvMemStorage}&quot;free_blocks&quot;^{CvSeqBlock}&quot;first&quot;^{CvSeqBlock}&quot;rect&quot;{CvRect=&quot;x&quot;i&quot;y&quot;i&quot;width&quot;i&quot;height&quot;i}&quot;color&quot;i&quot;reserved&quot;[3i]}'>
+<field declared_type='int' name='flags' type='i'/>
+<field declared_type='int' name='header_size' type='i'/>
+<field declared_type='struct CvSeq*' name='h_prev' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+<field declared_type='struct CvSeq*' name='h_next' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+<field declared_type='struct CvSeq*' name='v_prev' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+<field declared_type='struct CvSeq*' name='v_next' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+<field declared_type='int' name='total' type='i'/>
+<field declared_type='int' name='elem_size' type='i'/>
+<field declared_type='schar*' name='block_max' type='*'/>
+<field declared_type='schar*' name='ptr' type='*'/>
+<field declared_type='int' name='delta_elems' type='i'/>
+<field declared_type='CvMemStorage*' name='storage' type='^{CvMemStorage=i^{CvMemBlock}^{CvMemBlock}^{CvMemStorage}ii}'/>
+<field declared_type='CvSeqBlock*' name='free_blocks' type='^{CvSeqBlock=^{CvSeqBlock}^{CvSeqBlock}ii*}'/>
+<field declared_type='CvSeqBlock*' name='first' type='^{CvSeqBlock=^{CvSeqBlock}^{CvSeqBlock}ii*}'/>
+<field declared_type='CvRect' name='rect' type='{CvRect=&quot;x&quot;i&quot;y&quot;i&quot;width&quot;i&quot;height&quot;i}'/>
+<field declared_type='int' name='color' type='i'/>
+<field declared_type='int*' name='reserved' type='[3i]'/>
+</struct>
+<struct name='CvPoint3D32f' type='{CvPoint3D32f=&quot;x&quot;f&quot;y&quot;f&quot;z&quot;f}'>
+<field declared_type='float' name='x' type='f'/>
+<field declared_type='float' name='y' type='f'/>
+<field declared_type='float' name='z' type='f'/>
+</struct>
+<struct name='CvPoint3D64f' type='{CvPoint3D64f=&quot;x&quot;d&quot;y&quot;d&quot;z&quot;d}'>
+<field declared_type='double' name='x' type='d'/>
+<field declared_type='double' name='y' type='d'/>
+<field declared_type='double' name='z' type='d'/>
+</struct>
+<struct name='CvRect' type='{CvRect=&quot;x&quot;i&quot;y&quot;i&quot;width&quot;i&quot;height&quot;i}'>
+<field declared_type='int' name='x' type='i'/>
+<field declared_type='int' name='y' type='i'/>
+<field declared_type='int' name='width' type='i'/>
+<field declared_type='int' name='height' type='i'/>
+</struct>
+<struct name='CvScalar' type='{CvScalar=&quot;val&quot;[4d]}'>
+<field declared_type='double*' name='val' type='[4d]'/>
+</struct>
+<struct name='CvSeq' type='{CvSeq=&quot;flags&quot;i&quot;header_size&quot;i&quot;h_prev&quot;^{CvSeq}&quot;h_next&quot;^{CvSeq}&quot;v_prev&quot;^{CvSeq}&quot;v_next&quot;^{CvSeq}&quot;total&quot;i&quot;elem_size&quot;i&quot;block_max&quot;*&quot;ptr&quot;*&quot;delta_elems&quot;i&quot;storage&quot;^{CvMemStorage}&quot;free_blocks&quot;^{CvSeqBlock}&quot;first&quot;^{CvSeqBlock}}'>
+<field declared_type='int' name='flags' type='i'/>
+<field declared_type='int' name='header_size' type='i'/>
+<field declared_type='struct CvSeq*' name='h_prev' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+<field declared_type='struct CvSeq*' name='h_next' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+<field declared_type='struct CvSeq*' name='v_prev' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+<field declared_type='struct CvSeq*' name='v_next' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+<field declared_type='int' name='total' type='i'/>
+<field declared_type='int' name='elem_size' type='i'/>
+<field declared_type='schar*' name='block_max' type='*'/>
+<field declared_type='schar*' name='ptr' type='*'/>
+<field declared_type='int' name='delta_elems' type='i'/>
+<field declared_type='CvMemStorage*' name='storage' type='^{CvMemStorage=i^{CvMemBlock}^{CvMemBlock}^{CvMemStorage}ii}'/>
+<field declared_type='CvSeqBlock*' name='free_blocks' type='^{CvSeqBlock=^{CvSeqBlock}^{CvSeqBlock}ii*}'/>
+<field declared_type='CvSeqBlock*' name='first' type='^{CvSeqBlock=^{CvSeqBlock}^{CvSeqBlock}ii*}'/>
+</struct>
+<struct name='CvSeqBlock' type='{CvSeqBlock=&quot;prev&quot;^{CvSeqBlock}&quot;next&quot;^{CvSeqBlock}&quot;start_index&quot;i&quot;count&quot;i&quot;data&quot;*}'>
+<field declared_type='struct CvSeqBlock*' name='prev' type='^{CvSeqBlock=^{CvSeqBlock}^{CvSeqBlock}ii*}'/>
+<field declared_type='struct CvSeqBlock*' name='next' type='^{CvSeqBlock=^{CvSeqBlock}^{CvSeqBlock}ii*}'/>
+<field declared_type='int' name='start_index' type='i'/>
+<field declared_type='int' name='count' type='i'/>
+<field declared_type='schar*' name='data' type='*'/>
+</struct>
+<struct name='CvSeqReader' type='{CvSeqReader=&quot;header_size&quot;i&quot;seq&quot;^{CvSeq}&quot;block&quot;^{CvSeqBlock}&quot;ptr&quot;*&quot;block_min&quot;*&quot;block_max&quot;*&quot;delta_index&quot;i&quot;prev_elem&quot;*}'>
+<field declared_type='int' name='header_size' type='i'/>
+<field declared_type='CvSeq*' name='seq' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+<field declared_type='CvSeqBlock*' name='block' type='^{CvSeqBlock=^{CvSeqBlock}^{CvSeqBlock}ii*}'/>
+<field declared_type='schar*' name='ptr' type='*'/>
+<field declared_type='schar*' name='block_min' type='*'/>
+<field declared_type='schar*' name='block_max' type='*'/>
+<field declared_type='int' name='delta_index' type='i'/>
+<field declared_type='schar*' name='prev_elem' type='*'/>
+</struct>
+<struct name='CvSeqWriter' type='{CvSeqWriter=&quot;header_size&quot;i&quot;seq&quot;^{CvSeq}&quot;block&quot;^{CvSeqBlock}&quot;ptr&quot;*&quot;block_min&quot;*&quot;block_max&quot;*}'>
+<field declared_type='int' name='header_size' type='i'/>
+<field declared_type='CvSeq*' name='seq' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+<field declared_type='CvSeqBlock*' name='block' type='^{CvSeqBlock=^{CvSeqBlock}^{CvSeqBlock}ii*}'/>
+<field declared_type='schar*' name='ptr' type='*'/>
+<field declared_type='schar*' name='block_min' type='*'/>
+<field declared_type='schar*' name='block_max' type='*'/>
+</struct>
+<struct name='CvSet' type='{CvSet=&quot;flags&quot;i&quot;header_size&quot;i&quot;h_prev&quot;^{CvSeq}&quot;h_next&quot;^{CvSeq}&quot;v_prev&quot;^{CvSeq}&quot;v_next&quot;^{CvSeq}&quot;total&quot;i&quot;elem_size&quot;i&quot;block_max&quot;*&quot;ptr&quot;*&quot;delta_elems&quot;i&quot;storage&quot;^{CvMemStorage}&quot;free_blocks&quot;^{CvSeqBlock}&quot;first&quot;^{CvSeqBlock}&quot;free_elems&quot;^{CvSetElem}&quot;active_count&quot;i}'>
+<field declared_type='int' name='flags' type='i'/>
+<field declared_type='int' name='header_size' type='i'/>
+<field declared_type='struct CvSeq*' name='h_prev' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+<field declared_type='struct CvSeq*' name='h_next' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+<field declared_type='struct CvSeq*' name='v_prev' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+<field declared_type='struct CvSeq*' name='v_next' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+<field declared_type='int' name='total' type='i'/>
+<field declared_type='int' name='elem_size' type='i'/>
+<field declared_type='schar*' name='block_max' type='*'/>
+<field declared_type='schar*' name='ptr' type='*'/>
+<field declared_type='int' name='delta_elems' type='i'/>
+<field declared_type='CvMemStorage*' name='storage' type='^{CvMemStorage=i^{CvMemBlock}^{CvMemBlock}^{CvMemStorage}ii}'/>
+<field declared_type='CvSeqBlock*' name='free_blocks' type='^{CvSeqBlock=^{CvSeqBlock}^{CvSeqBlock}ii*}'/>
+<field declared_type='CvSeqBlock*' name='first' type='^{CvSeqBlock=^{CvSeqBlock}^{CvSeqBlock}ii*}'/>
+<field declared_type='CvSetElem*' name='free_elems' type='^{CvSetElem=i^{CvSetElem}}'/>
+<field declared_type='int' name='active_count' type='i'/>
+</struct>
+<struct name='CvSetElem' type='{CvSetElem=&quot;flags&quot;i&quot;next_free&quot;^{CvSetElem}}'>
+<field declared_type='int' name='flags' type='i'/>
+<field declared_type='struct CvSetElem*' name='next_free' type='^{CvSetElem=i^{CvSetElem}}'/>
+</struct>
+<struct name='CvSize' type='{CvSize=&quot;width&quot;i&quot;height&quot;i}'>
+<field declared_type='int' name='width' type='i'/>
+<field declared_type='int' name='height' type='i'/>
+</struct>
+<struct name='CvSize2D32f' type='{CvSize2D32f=&quot;width&quot;f&quot;height&quot;f}'>
+<field declared_type='float' name='width' type='f'/>
+<field declared_type='float' name='height' type='f'/>
+</struct>
+<struct name='CvSlice' type='{CvSlice=&quot;start_index&quot;i&quot;end_index&quot;i}'>
+<field declared_type='int' name='start_index' type='i'/>
+<field declared_type='int' name='end_index' type='i'/>
+</struct>
+<struct name='CvSparseMat' type='{CvSparseMat=&quot;type&quot;i&quot;dims&quot;i&quot;refcount&quot;^i&quot;hdr_refcount&quot;i&quot;heap&quot;^{CvSet}&quot;hashtable&quot;^^v&quot;hashsize&quot;i&quot;valoffset&quot;i&quot;idxoffset&quot;i&quot;size&quot;[32i]}'>
+<field declared_type='int' name='type' type='i'/>
+<field declared_type='int' name='dims' type='i'/>
+<field declared_type='int*' name='refcount' type='^i'/>
+<field declared_type='int' name='hdr_refcount' type='i'/>
+<field declared_type='struct CvSet*' name='heap' type='^{CvSet=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}^{CvSetElem}i}'/>
+<field declared_type='void**' name='hashtable' type='^^v'/>
+<field declared_type='int' name='hashsize' type='i'/>
+<field declared_type='int' name='valoffset' type='i'/>
+<field declared_type='int' name='idxoffset' type='i'/>
+<field declared_type='int*' name='size' type='[32i]'/>
+</struct>
+<struct name='CvSparseMatIterator' type='{CvSparseMatIterator=&quot;mat&quot;^{CvSparseMat}&quot;node&quot;^{CvSparseNode}&quot;curidx&quot;i}'>
+<field declared_type='CvSparseMat*' name='mat' type='^{CvSparseMat=ii^ii^{CvSet}^^viii[32i]}'/>
+<field declared_type='CvSparseNode*' name='node' type='^{CvSparseNode=I^{CvSparseNode}}'/>
+<field declared_type='int' name='curidx' type='i'/>
+</struct>
+<struct name='CvSparseNode' type='{CvSparseNode=&quot;hashval&quot;I&quot;next&quot;^{CvSparseNode}}'>
+<field declared_type='unsigned int' name='hashval' type='I'/>
+<field declared_type='struct CvSparseNode*' name='next' type='^{CvSparseNode=I^{CvSparseNode}}'/>
+</struct>
+<struct name='CvString' type='{CvString=&quot;len&quot;i&quot;ptr&quot;*}'>
+<field declared_type='int' name='len' type='i'/>
+<field declared_type='char*' name='ptr' type='*'/>
+</struct>
+<struct name='CvStringHashNode' type='{CvStringHashNode=&quot;hashval&quot;I&quot;str&quot;{CvString=&quot;len&quot;i&quot;ptr&quot;*}&quot;next&quot;^{CvStringHashNode}}'>
+<field declared_type='unsigned int' name='hashval' type='I'/>
+<field declared_type='CvString' name='str' type='{CvString=&quot;len&quot;i&quot;ptr&quot;*}'/>
+<field declared_type='struct CvStringHashNode*' name='next' type='^{CvStringHashNode=I{CvString=i*}^{CvStringHashNode}}'/>
+</struct>
+<struct name='CvTermCriteria' type='{CvTermCriteria=&quot;type&quot;i&quot;max_iter&quot;i&quot;epsilon&quot;d}'>
+<field declared_type='int' name='type' type='i'/>
+<field declared_type='int' name='max_iter' type='i'/>
+<field declared_type='double' name='epsilon' type='d'/>
+</struct>
+<struct name='CvTreeNodeIterator' type='{CvTreeNodeIterator=&quot;node&quot;^v&quot;level&quot;i&quot;max_level&quot;i}'>
+<field const='true' declared_type='void*' name='node' type='^v'/>
+<field declared_type='int' name='level' type='i'/>
+<field declared_type='int' name='max_level' type='i'/>
+</struct>
+<struct name='CvTypeInfo' type='{CvTypeInfo=&quot;flags&quot;i&quot;header_size&quot;i&quot;prev&quot;^{CvTypeInfo}&quot;next&quot;^{CvTypeInfo}&quot;type_name&quot;*&quot;is_instance&quot;^?&quot;release&quot;^?&quot;read&quot;^?&quot;write&quot;^?&quot;clone&quot;^?}'>
+<field declared_type='int' name='flags' type='i'/>
+<field declared_type='int' name='header_size' type='i'/>
+<field declared_type='struct CvTypeInfo*' name='prev' type='^{CvTypeInfo=ii^{CvTypeInfo}^{CvTypeInfo}*^?^?^?^?^?}'/>
+<field declared_type='struct CvTypeInfo*' name='next' type='^{CvTypeInfo=ii^{CvTypeInfo}^{CvTypeInfo}*^?^?^?^?^?}'/>
+<field const='true' declared_type='char*' name='type_name' type='*'/>
+<field declared_type='CvIsInstanceFunc' function_pointer='true' name='is_instance' type='^?'>
+<arg const='true' declared_type='void*' type='^v'/>
+<retval declared_type='int' type='i'/>
+</field>
+<field declared_type='CvReleaseFunc' function_pointer='true' name='release' type='^?'>
+<arg declared_type='void**' type='^^v'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field declared_type='CvReadFunc' function_pointer='true' name='read' type='^?'>
+<arg declared_type='CvFileStorage*' type='^{CvFileStorage=}'/>
+<arg declared_type='CvFileNode*' type='^{CvFileNode=i^{CvTypeInfo}(?=di{CvString=i*}^{CvSeq}^{CvGenericHash})}'/>
+<retval declared_type='void*' type='^v'/>
+</field>
+<field declared_type='CvWriteFunc' function_pointer='true' name='write' type='^?'>
+<arg declared_type='CvFileStorage*' type='^{CvFileStorage=}'/>
+<arg const='true' declared_type='char*' type='*'/>
+<arg const='true' declared_type='void*' type='^v'/>
+<arg declared_type='CvAttrList' type='{CvAttrList=^*^{CvAttrList}}'/>
+<retval declared_type='void' type='v'/>
+</field>
+<field declared_type='CvCloneFunc' function_pointer='true' name='clone' type='^?'>
+<arg const='true' declared_type='void*' type='^v'/>
+<retval declared_type='void*' type='^v'/>
+</field>
+</struct>
+<struct name='IplConvKernel' type='{_IplConvKernel=&quot;nCols&quot;i&quot;nRows&quot;i&quot;anchorX&quot;i&quot;anchorY&quot;i&quot;values&quot;^i&quot;nShiftR&quot;i}'>
+<field declared_type='int' name='nCols' type='i'/>
+<field declared_type='int' name='nRows' type='i'/>
+<field declared_type='int' name='anchorX' type='i'/>
+<field declared_type='int' name='anchorY' type='i'/>
+<field declared_type='int*' name='values' type='^i'/>
+<field declared_type='int' name='nShiftR' type='i'/>
+</struct>
+<struct name='IplConvKernelFP' type='{_IplConvKernelFP=&quot;nCols&quot;i&quot;nRows&quot;i&quot;anchorX&quot;i&quot;anchorY&quot;i&quot;values&quot;^f}'>
+<field declared_type='int' name='nCols' type='i'/>
+<field declared_type='int' name='nRows' type='i'/>
+<field declared_type='int' name='anchorX' type='i'/>
+<field declared_type='int' name='anchorY' type='i'/>
+<field declared_type='float*' name='values' type='^f'/>
+</struct>
+<struct name='IplImage' type='{_IplImage=&quot;nSize&quot;i&quot;ID&quot;i&quot;nChannels&quot;i&quot;alphaChannel&quot;i&quot;depth&quot;i&quot;colorModel&quot;[4c]&quot;channelSeq&quot;[4c]&quot;dataOrder&quot;i&quot;origin&quot;i&quot;align&quot;i&quot;width&quot;i&quot;height&quot;i&quot;roi&quot;^{_IplROI}&quot;maskROI&quot;^{_IplImage}&quot;imageId&quot;^v&quot;tileInfo&quot;^{_IplTileInfo}&quot;imageSize&quot;i&quot;imageData&quot;*&quot;widthStep&quot;i&quot;BorderMode&quot;[4i]&quot;BorderConst&quot;[4i]&quot;imageDataOrigin&quot;*}'>
+<field declared_type='int' name='nSize' type='i'/>
+<field declared_type='int' name='ID' type='i'/>
+<field declared_type='int' name='nChannels' type='i'/>
+<field declared_type='int' name='alphaChannel' type='i'/>
+<field declared_type='int' name='depth' type='i'/>
+<field declared_type='char*' name='colorModel' type='[4c]'/>
+<field declared_type='char*' name='channelSeq' type='[4c]'/>
+<field declared_type='int' name='dataOrder' type='i'/>
+<field declared_type='int' name='origin' type='i'/>
+<field declared_type='int' name='align' type='i'/>
+<field declared_type='int' name='width' type='i'/>
+<field declared_type='int' name='height' type='i'/>
+<field declared_type='struct _IplROI*' name='roi' type='^{_IplROI=iiiii}'/>
+<field declared_type='struct _IplImage*' name='maskROI' type='^{_IplImage=iiiii[4c][4c]iiiii^{_IplROI}^{_IplImage}^v^{_IplTileInfo}i*i[4i][4i]*}'/>
+<field declared_type='void*' name='imageId' type='^v'/>
+<field declared_type='struct _IplTileInfo*' name='tileInfo' type='^{_IplTileInfo=}'/>
+<field declared_type='int' name='imageSize' type='i'/>
+<field declared_type='char*' name='imageData' type='*'/>
+<field declared_type='int' name='widthStep' type='i'/>
+<field declared_type='int*' name='BorderMode' type='[4i]'/>
+<field declared_type='int*' name='BorderConst' type='[4i]'/>
+<field declared_type='char*' name='imageDataOrigin' type='*'/>
+</struct>
+<struct name='IplROI' type='{_IplROI=&quot;coi&quot;i&quot;xOffset&quot;i&quot;yOffset&quot;i&quot;width&quot;i&quot;height&quot;i}'>
+<field declared_type='int' name='coi' type='i'/>
+<field declared_type='int' name='xOffset' type='i'/>
+<field declared_type='int' name='yOffset' type='i'/>
+<field declared_type='int' name='width' type='i'/>
+<field declared_type='int' name='height' type='i'/>
+</struct>
+<opaque name='CvCapture' type='^{CvCapture=}'/>
+<opaque name='CvFileNodeHash' type='^{CvGenericHash=}'/>
+<opaque name='CvFileStorage' type='^{CvFileStorage=}'/>
+<opaque name='CvFont' type='^{CvFont=}'/>
+<opaque name='CvGraphScanner' type='^{CvGraphScanner=}'/>
+<opaque name='CvNArrayIterator' type='^{CvNArrayIterator=}'/>
+<opaque name='CvVideoWriter' type='^{CvVideoWriter=}'/>
+<opaque name='IplTileInfo' type='^{_IplTileInfo=}'/>
+<constant declared_type='int' name='cvflann' type='i'/>
+<string_constant name='CV_TYPE_NAME_GRAPH' value='opencv-graph'/>
+<string_constant name='CV_TYPE_NAME_IMAGE' value='opencv-image'/>
+<string_constant name='CV_TYPE_NAME_MAT' value='opencv-matrix'/>
+<string_constant name='CV_TYPE_NAME_MATND' value='opencv-nd-matrix'/>
+<string_constant name='CV_TYPE_NAME_SEQ' value='opencv-sequence'/>
+<string_constant name='CV_TYPE_NAME_SEQ_TREE' value='opencv-sequence-tree'/>
+<string_constant name='CV_TYPE_NAME_SPARSE_MAT' value='opencv-sparse-matrix'/>
+<string_constant name='FLANN_SIGNATURE_' value='FLANN_INDEX'/>
+<string_constant name='FLANN_VERSION_' value='1.6.10'/>
+<enum name='CV_16S' value='3'/>
+<enum name='CV_16SC1' value='3'/>
+<enum name='CV_16SC2' value='11'/>
+<enum name='CV_16SC3' value='19'/>
+<enum name='CV_16SC4' value='27'/>
+<enum name='CV_16U' value='2'/>
+<enum name='CV_16UC1' value='2'/>
+<enum name='CV_16UC2' value='10'/>
+<enum name='CV_16UC3' value='18'/>
+<enum name='CV_16UC4' value='26'/>
+<enum name='CV_32F' value='5'/>
+<enum name='CV_32FC1' value='5'/>
+<enum name='CV_32FC2' value='13'/>
+<enum name='CV_32FC3' value='21'/>
+<enum name='CV_32FC4' value='29'/>
+<enum name='CV_32S' value='4'/>
+<enum name='CV_32SC1' value='4'/>
+<enum name='CV_32SC2' value='12'/>
+<enum name='CV_32SC3' value='20'/>
+<enum name='CV_32SC4' value='28'/>
+<enum name='CV_64F' value='6'/>
+<enum name='CV_64FC1' value='6'/>
+<enum name='CV_64FC2' value='14'/>
+<enum name='CV_64FC3' value='22'/>
+<enum name='CV_64FC4' value='30'/>
+<enum name='CV_8S' value='1'/>
+<enum name='CV_8SC1' value='1'/>
+<enum name='CV_8SC2' value='9'/>
+<enum name='CV_8SC3' value='17'/>
+<enum name='CV_8SC4' value='25'/>
+<enum name='CV_8U' value='0'/>
+<enum name='CV_8UC1' value='0'/>
+<enum name='CV_8UC2' value='8'/>
+<enum name='CV_8UC3' value='16'/>
+<enum name='CV_8UC4' value='24'/>
+<enum name='CV_AA' value='16'/>
+<enum name='CV_AUTOSTEP' value='2147483647'/>
+<enum name='CV_AUTO_STEP' value='2147483647'/>
+<enum name='CV_BACK' value='0'/>
+<enum name='CV_BadAlign' value='-21'/>
+<enum name='CV_BadAlphaChannel' value='-18'/>
+<enum name='CV_BadCOI' value='-24'/>
+<enum name='CV_BadCallBack' value='-22'/>
+<enum name='CV_BadDataPtr' value='-12'/>
+<enum name='CV_BadDepth' value='-17'/>
+<enum name='CV_BadImageSize' value='-10'/>
+<enum name='CV_BadModelOrChSeq' value='-14'/>
+<enum name='CV_BadNumChannel1U' value='-16'/>
+<enum name='CV_BadNumChannels' value='-15'/>
+<enum name='CV_BadOffset' value='-11'/>
+<enum name='CV_BadOrder' value='-19'/>
+<enum name='CV_BadOrigin' value='-20'/>
+<enum name='CV_BadROISize' value='-25'/>
+<enum name='CV_BadStep' value='-13'/>
+<enum name='CV_BadTileSize' value='-23'/>
+<enum name='CV_C' value='1'/>
+<enum name='CV_CAP_ANDROID' value='1000'/>
+<enum name='CV_CAP_ANDROID_ANTIBANDING_50HZ' value='0'/>
+<enum name='CV_CAP_ANDROID_ANTIBANDING_60HZ' value='1'/>
+<enum name='CV_CAP_ANDROID_ANTIBANDING_AUTO' value='2'/>
+<enum name='CV_CAP_ANDROID_ANTIBANDING_OFF' value='3'/>
+<enum name='CV_CAP_ANDROID_BACK' value='1099'/>
+<enum name='CV_CAP_ANDROID_COLOR_FRAME' value='0'/>
+<enum name='CV_CAP_ANDROID_COLOR_FRAME_BGR' value='0'/>
+<enum name='CV_CAP_ANDROID_COLOR_FRAME_BGRA' value='3'/>
+<enum name='CV_CAP_ANDROID_COLOR_FRAME_RGB' value='2'/>
+<enum name='CV_CAP_ANDROID_COLOR_FRAME_RGBA' value='4'/>
+<enum name='CV_CAP_ANDROID_FLASH_MODE_AUTO' value='0'/>
+<enum name='CV_CAP_ANDROID_FLASH_MODE_OFF' value='1'/>
+<enum name='CV_CAP_ANDROID_FLASH_MODE_ON' value='2'/>
+<enum name='CV_CAP_ANDROID_FLASH_MODE_RED_EYE' value='3'/>
+<enum name='CV_CAP_ANDROID_FLASH_MODE_TORCH' value='4'/>
+<enum name='CV_CAP_ANDROID_FOCUS_MODE_AUTO' value='0'/>
+<enum name='CV_CAP_ANDROID_FOCUS_MODE_CONTINUOUS_VIDEO' value='1'/>
+<enum name='CV_CAP_ANDROID_FOCUS_MODE_EDOF' value='2'/>
+<enum name='CV_CAP_ANDROID_FOCUS_MODE_FIXED' value='3'/>
+<enum name='CV_CAP_ANDROID_FOCUS_MODE_INFINITY' value='4'/>
+<enum name='CV_CAP_ANDROID_FOCUS_MODE_MACRO' value='5'/>
+<enum name='CV_CAP_ANDROID_FRONT' value='1098'/>
+<enum name='CV_CAP_ANDROID_GREY_FRAME' value='1'/>
+<enum name='CV_CAP_ANDROID_WHITE_BALANCE_AUTO' value='0'/>
+<enum name='CV_CAP_ANDROID_WHITE_BALANCE_CLOUDY_DAYLIGHT' value='1'/>
+<enum name='CV_CAP_ANDROID_WHITE_BALANCE_DAYLIGHT' value='2'/>
+<enum name='CV_CAP_ANDROID_WHITE_BALANCE_FLUORESCENT' value='3'/>
+<enum name='CV_CAP_ANDROID_WHITE_BALANCE_INCANDESCENT' value='4'/>
+<enum name='CV_CAP_ANDROID_WHITE_BALANCE_SHADE' value='5'/>
+<enum name='CV_CAP_ANDROID_WHITE_BALANCE_TWILIGHT' value='6'/>
+<enum name='CV_CAP_ANDROID_WHITE_BALANCE_WARM_FLUORESCENT' value='7'/>
+<enum name='CV_CAP_ANY' value='0'/>
+<enum name='CV_CAP_AVFOUNDATION' value='1200'/>
+<enum name='CV_CAP_CMU1394' value='300'/>
+<enum name='CV_CAP_DC1394' value='300'/>
+<enum name='CV_CAP_DSHOW' value='700'/>
+<enum name='CV_CAP_FIREWARE' value='300'/>
+<enum name='CV_CAP_FIREWIRE' value='300'/>
+<enum name='CV_CAP_GIGANETIX' value='1300'/>
+<enum name='CV_CAP_GSTREAMER_QUEUE_LENGTH' value='200'/>
+<enum name='CV_CAP_IEEE1394' value='300'/>
+<enum name='CV_CAP_INTELPERC' value='1500'/>
+<enum name='CV_CAP_INTELPERC_DEPTH_GENERATOR' value='536870912'/>
+<enum name='CV_CAP_INTELPERC_DEPTH_MAP' value='0'/>
+<enum name='CV_CAP_INTELPERC_GENERATORS_MASK' value='805306368'/>
+<enum name='CV_CAP_INTELPERC_IMAGE' value='3'/>
+<enum name='CV_CAP_INTELPERC_IMAGE_GENERATOR' value='268435456'/>
+<enum name='CV_CAP_INTELPERC_IR_MAP' value='2'/>
+<enum name='CV_CAP_INTELPERC_UVDEPTH_MAP' value='1'/>
+<enum name='CV_CAP_MIL' value='100'/>
+<enum name='CV_CAP_MSMF' value='1400'/>
+<enum name='CV_CAP_OPENNI' value='900'/>
+<enum name='CV_CAP_OPENNI_ASUS' value='910'/>
+<enum name='CV_CAP_OPENNI_BGR_IMAGE' value='5'/>
+<enum name='CV_CAP_OPENNI_DEPTH_GENERATOR' value='-2147483648'/>
+<enum name='CV_CAP_OPENNI_DEPTH_GENERATOR_BASELINE' value='-2147483546'/>
+<enum name='CV_CAP_OPENNI_DEPTH_GENERATOR_FOCAL_LENGTH' value='-2147483545'/>
+<enum name='CV_CAP_OPENNI_DEPTH_GENERATOR_REGISTRATION' value='-2147483544'/>
+<enum name='CV_CAP_OPENNI_DEPTH_GENERATOR_REGISTRATION_ON' value='-2147483544'/>
+<enum name='CV_CAP_OPENNI_DEPTH_MAP' value='0'/>
+<enum name='CV_CAP_OPENNI_DISPARITY_MAP' value='2'/>
+<enum name='CV_CAP_OPENNI_DISPARITY_MAP_32F' value='3'/>
+<enum name='CV_CAP_OPENNI_GENERATORS_MASK' value='-1073741824'/>
+<enum name='CV_CAP_OPENNI_GRAY_IMAGE' value='6'/>
+<enum name='CV_CAP_OPENNI_IMAGE_GENERATOR' value='1073741824'/>
+<enum name='CV_CAP_OPENNI_IMAGE_GENERATOR_OUTPUT_MODE' value='1073741924'/>
+<enum name='CV_CAP_OPENNI_IMAGE_GENERATOR_PRESENT' value='1073741933'/>
+<enum name='CV_CAP_OPENNI_POINT_CLOUD_MAP' value='1'/>
+<enum name='CV_CAP_OPENNI_QVGA_30HZ' value='3'/>
+<enum name='CV_CAP_OPENNI_QVGA_60HZ' value='4'/>
+<enum name='CV_CAP_OPENNI_SXGA_15HZ' value='1'/>
+<enum name='CV_CAP_OPENNI_SXGA_30HZ' value='2'/>
+<enum name='CV_CAP_OPENNI_VALID_DEPTH_MASK' value='4'/>
+<enum name='CV_CAP_OPENNI_VGA_30HZ' value='0'/>
+<enum name='CV_CAP_PROP_ANDROID_ANTIBANDING' value='8004'/>
+<enum name='CV_CAP_PROP_ANDROID_FLASH_MODE' value='8001'/>
+<enum name='CV_CAP_PROP_ANDROID_FOCAL_LENGTH' value='8005'/>
+<enum name='CV_CAP_PROP_ANDROID_FOCUS_DISTANCE_FAR' value='8008'/>
+<enum name='CV_CAP_PROP_ANDROID_FOCUS_DISTANCE_NEAR' value='8006'/>
+<enum name='CV_CAP_PROP_ANDROID_FOCUS_DISTANCE_OPTIMAL' value='8007'/>
+<enum name='CV_CAP_PROP_ANDROID_FOCUS_MODE' value='8002'/>
+<enum name='CV_CAP_PROP_ANDROID_WHITE_BALANCE' value='8003'/>
+<enum name='CV_CAP_PROP_AUTOGRAB' value='1024'/>
+<enum name='CV_CAP_PROP_AUTO_EXPOSURE' value='21'/>
+<enum name='CV_CAP_PROP_BACKLIGHT' value='32'/>
+<enum name='CV_CAP_PROP_BRIGHTNESS' value='10'/>
+<enum name='CV_CAP_PROP_CONTRAST' value='11'/>
+<enum name='CV_CAP_PROP_CONVERT_RGB' value='16'/>
+<enum name='CV_CAP_PROP_DC1394_MODE_AUTO' value='-2'/>
+<enum name='CV_CAP_PROP_DC1394_MODE_MANUAL' value='-3'/>
+<enum name='CV_CAP_PROP_DC1394_MODE_ONE_PUSH_AUTO' value='-1'/>
+<enum name='CV_CAP_PROP_DC1394_OFF' value='-4'/>
+<enum name='CV_CAP_PROP_EXPOSURE' value='15'/>
+<enum name='CV_CAP_PROP_FOCUS' value='28'/>
+<enum name='CV_CAP_PROP_FORMAT' value='8'/>
+<enum name='CV_CAP_PROP_FOURCC' value='6'/>
+<enum name='CV_CAP_PROP_FPS' value='5'/>
+<enum name='CV_CAP_PROP_FRAME_COUNT' value='7'/>
+<enum name='CV_CAP_PROP_FRAME_HEIGHT' value='4'/>
+<enum name='CV_CAP_PROP_FRAME_WIDTH' value='3'/>
+<enum name='CV_CAP_PROP_GAIN' value='14'/>
+<enum name='CV_CAP_PROP_GAMMA' value='22'/>
+<enum name='CV_CAP_PROP_GIGA_FRAME_HEIGH_MAX' value='10004'/>
+<enum name='CV_CAP_PROP_GIGA_FRAME_OFFSET_X' value='10001'/>
+<enum name='CV_CAP_PROP_GIGA_FRAME_OFFSET_Y' value='10002'/>
+<enum name='CV_CAP_PROP_GIGA_FRAME_SENS_HEIGH' value='10006'/>
+<enum name='CV_CAP_PROP_GIGA_FRAME_SENS_WIDTH' value='10005'/>
+<enum name='CV_CAP_PROP_GIGA_FRAME_WIDTH_MAX' value='10003'/>
+<enum name='CV_CAP_PROP_GUID' value='29'/>
+<enum name='CV_CAP_PROP_HUE' value='13'/>
+<enum name='CV_CAP_PROP_INTELPERC_DEPTH_CONFIDENCE_THRESHOLD' value='11005'/>
+<enum name='CV_CAP_PROP_INTELPERC_DEPTH_FOCAL_LENGTH_HORZ' value='11006'/>
+<enum name='CV_CAP_PROP_INTELPERC_DEPTH_FOCAL_LENGTH_VERT' value='11007'/>
+<enum name='CV_CAP_PROP_INTELPERC_DEPTH_LOW_CONFIDENCE_VALUE' value='11003'/>
+<enum name='CV_CAP_PROP_INTELPERC_DEPTH_SATURATION_VALUE' value='11004'/>
+<enum name='CV_CAP_PROP_INTELPERC_PROFILE_COUNT' value='11001'/>
+<enum name='CV_CAP_PROP_INTELPERC_PROFILE_IDX' value='11002'/>
+<enum name='CV_CAP_PROP_IOS_DEVICE_EXPOSURE' value='9002'/>
+<enum name='CV_CAP_PROP_IOS_DEVICE_FLASH' value='9003'/>
+<enum name='CV_CAP_PROP_IOS_DEVICE_FOCUS' value='9001'/>
+<enum name='CV_CAP_PROP_IOS_DEVICE_TORCH' value='9005'/>
+<enum name='CV_CAP_PROP_IOS_DEVICE_WHITEBALANCE' value='9004'/>
+<enum name='CV_CAP_PROP_IRIS' value='36'/>
+<enum name='CV_CAP_PROP_ISO_SPEED' value='30'/>
+<enum name='CV_CAP_PROP_MAX_DC1394' value='31'/>
+<enum name='CV_CAP_PROP_MODE' value='9'/>
+<enum name='CV_CAP_PROP_MONOCROME' value='19'/>
+<enum name='CV_CAP_PROP_OPENNI_APPROX_FRAME_SYNC' value='105'/>
+<enum name='CV_CAP_PROP_OPENNI_BASELINE' value='102'/>
+<enum name='CV_CAP_PROP_OPENNI_CIRCLE_BUFFER' value='107'/>
+<enum name='CV_CAP_PROP_OPENNI_FOCAL_LENGTH' value='103'/>
+<enum name='CV_CAP_PROP_OPENNI_FRAME_MAX_DEPTH' value='101'/>
+<enum name='CV_CAP_PROP_OPENNI_GENERATOR_PRESENT' value='109'/>
+<enum name='CV_CAP_PROP_OPENNI_MAX_BUFFER_SIZE' value='106'/>
+<enum name='CV_CAP_PROP_OPENNI_MAX_TIME_DURATION' value='108'/>
+<enum name='CV_CAP_PROP_OPENNI_OUTPUT_MODE' value='100'/>
+<enum name='CV_CAP_PROP_OPENNI_REGISTRATION' value='104'/>
+<enum name='CV_CAP_PROP_OPENNI_REGISTRATION_ON' value='104'/>
+<enum name='CV_CAP_PROP_PAN' value='33'/>
+<enum name='CV_CAP_PROP_POS_AVI_RATIO' value='2'/>
+<enum name='CV_CAP_PROP_POS_FRAMES' value='1'/>
+<enum name='CV_CAP_PROP_POS_MSEC' value='0'/>
+<enum name='CV_CAP_PROP_PREVIEW_FORMAT' value='1026'/>
+<enum name='CV_CAP_PROP_PVAPI_MULTICASTIP' value='300'/>
+<enum name='CV_CAP_PROP_RECTIFICATION' value='18'/>
+<enum name='CV_CAP_PROP_ROLL' value='35'/>
+<enum name='CV_CAP_PROP_SATURATION' value='12'/>
+<enum name='CV_CAP_PROP_SETTINGS' value='37'/>
+<enum name='CV_CAP_PROP_SHARPNESS' value='20'/>
+<enum name='CV_CAP_PROP_SUPPORTED_PREVIEW_SIZES_STRING' value='1025'/>
+<enum name='CV_CAP_PROP_TEMPERATURE' value='23'/>
+<enum name='CV_CAP_PROP_TILT' value='34'/>
+<enum name='CV_CAP_PROP_TRIGGER' value='24'/>
+<enum name='CV_CAP_PROP_TRIGGER_DELAY' value='25'/>
+<enum name='CV_CAP_PROP_WHITE_BALANCE_BLUE_U' value='17'/>
+<enum name='CV_CAP_PROP_WHITE_BALANCE_RED_V' value='26'/>
+<enum name='CV_CAP_PROP_XI_AEAG' value='415'/>
+<enum name='CV_CAP_PROP_XI_AEAG_LEVEL' value='419'/>
+<enum name='CV_CAP_PROP_XI_AE_MAX_LIMIT' value='417'/>
+<enum name='CV_CAP_PROP_XI_AG_MAX_LIMIT' value='418'/>
+<enum name='CV_CAP_PROP_XI_AUTO_WB' value='414'/>
+<enum name='CV_CAP_PROP_XI_DATA_FORMAT' value='401'/>
+<enum name='CV_CAP_PROP_XI_DOWNSAMPLING' value='400'/>
+<enum name='CV_CAP_PROP_XI_EXP_PRIORITY' value='416'/>
+<enum name='CV_CAP_PROP_XI_GPI_LEVEL' value='408'/>
+<enum name='CV_CAP_PROP_XI_GPI_MODE' value='407'/>
+<enum name='CV_CAP_PROP_XI_GPI_SELECTOR' value='406'/>
+<enum name='CV_CAP_PROP_XI_GPO_MODE' value='410'/>
+<enum name='CV_CAP_PROP_XI_GPO_SELECTOR' value='409'/>
+<enum name='CV_CAP_PROP_XI_LED_MODE' value='412'/>
+<enum name='CV_CAP_PROP_XI_LED_SELECTOR' value='411'/>
+<enum name='CV_CAP_PROP_XI_MANUAL_WB' value='413'/>
+<enum name='CV_CAP_PROP_XI_OFFSET_X' value='402'/>
+<enum name='CV_CAP_PROP_XI_OFFSET_Y' value='403'/>
+<enum name='CV_CAP_PROP_XI_TIMEOUT' value='420'/>
+<enum name='CV_CAP_PROP_XI_TRG_SOFTWARE' value='405'/>
+<enum name='CV_CAP_PROP_XI_TRG_SOURCE' value='404'/>
+<enum name='CV_CAP_PROP_ZOOM' value='27'/>
+<enum name='CV_CAP_PVAPI' value='800'/>
+<enum name='CV_CAP_QT' value='500'/>
+<enum name='CV_CAP_STEREO' value='400'/>
+<enum name='CV_CAP_TYZX' value='400'/>
+<enum name='CV_CAP_UNICAP' value='600'/>
+<enum name='CV_CAP_V4L' value='200'/>
+<enum name='CV_CAP_V4L2' value='200'/>
+<enum name='CV_CAP_VFW' value='200'/>
+<enum name='CV_CAP_XIAPI' value='1100'/>
+<enum name='CV_CHECKBOX' value='1'/>
+<enum name='CV_CHECK_QUIET' value='2'/>
+<enum name='CV_CHECK_RANGE' value='1'/>
+<enum name='CV_CHOLESKY' value='3'/>
+<enum name='CV_CMP_EQ' value='0'/>
+<enum name='CV_CMP_GE' value='2'/>
+<enum name='CV_CMP_GT' value='1'/>
+<enum name='CV_CMP_LE' value='4'/>
+<enum name='CV_CMP_LT' value='3'/>
+<enum name='CV_CMP_NE' value='5'/>
+<enum name='CV_CN_MAX' value='512'/>
+<enum name='CV_CN_SHIFT' value='3'/>
+<enum name='CV_COVAR_COLS' value='16'/>
+<enum name='CV_COVAR_NORMAL' value='1'/>
+<enum name='CV_COVAR_ROWS' value='8'/>
+<enum name='CV_COVAR_SCALE' value='4'/>
+<enum name='CV_COVAR_SCRAMBLED' value='0'/>
+<enum name='CV_COVAR_USE_AVG' value='2'/>
+<enum name='CV_CPU_AVX' value='10'/>
+<enum name='CV_CPU_MMX' value='1'/>
+<enum name='CV_CPU_NONE' value='0'/>
+<enum name='CV_CPU_POPCNT' value='8'/>
+<enum name='CV_CPU_SSE' value='2'/>
+<enum name='CV_CPU_SSE2' value='3'/>
+<enum name='CV_CPU_SSE3' value='4'/>
+<enum name='CV_CPU_SSE4_1' value='6'/>
+<enum name='CV_CPU_SSE4_2' value='7'/>
+<enum name='CV_CPU_SSSE3' value='5'/>
+<enum name='CV_CVTIMG_FLIP' value='1'/>
+<enum name='CV_CVTIMG_SWAP_RB' value='2'/>
+<enum name='CV_DEPTH_MAX' value='8'/>
+<enum name='CV_DIFF' value='16'/>
+<enum name='CV_DIFF_C' value='17'/>
+<enum name='CV_DIFF_L1' value='18'/>
+<enum name='CV_DIFF_L2' value='20'/>
+<enum name='CV_DXT_FORWARD' value='0'/>
+<enum name='CV_DXT_INVERSE' value='1'/>
+<enum name='CV_DXT_INVERSE_SCALE' value='3'/>
+<enum name='CV_DXT_INV_SCALE' value='3'/>
+<enum name='CV_DXT_MUL_CONJ' value='8'/>
+<enum name='CV_DXT_ROWS' value='4'/>
+<enum name='CV_DXT_SCALE' value='2'/>
+<enum name='CV_ENABLE_UNROLLED' value='1'/>
+<enum name='CV_EVENT_FLAG_ALTKEY' value='32'/>
+<enum name='CV_EVENT_FLAG_CTRLKEY' value='8'/>
+<enum name='CV_EVENT_FLAG_LBUTTON' value='1'/>
+<enum name='CV_EVENT_FLAG_MBUTTON' value='4'/>
+<enum name='CV_EVENT_FLAG_RBUTTON' value='2'/>
+<enum name='CV_EVENT_FLAG_SHIFTKEY' value='16'/>
+<enum name='CV_EVENT_LBUTTONDBLCLK' value='7'/>
+<enum name='CV_EVENT_LBUTTONDOWN' value='1'/>
+<enum name='CV_EVENT_LBUTTONUP' value='4'/>
+<enum name='CV_EVENT_MBUTTONDBLCLK' value='9'/>
+<enum name='CV_EVENT_MBUTTONDOWN' value='3'/>
+<enum name='CV_EVENT_MBUTTONUP' value='6'/>
+<enum name='CV_EVENT_MOUSEMOVE' value='0'/>
+<enum name='CV_EVENT_RBUTTONDBLCLK' value='8'/>
+<enum name='CV_EVENT_RBUTTONDOWN' value='2'/>
+<enum name='CV_EVENT_RBUTTONUP' value='5'/>
+<enum name='CV_ErrModeLeaf' value='0'/>
+<enum name='CV_ErrModeParent' value='1'/>
+<enum name='CV_ErrModeSilent' value='2'/>
+<enum name='CV_FILLED' value='-1'/>
+<enum name='CV_FONT_BLACK' value='87'/>
+<enum name='CV_FONT_BOLD' value='75'/>
+<enum name='CV_FONT_DEMIBOLD' value='63'/>
+<enum name='CV_FONT_HERSHEY_COMPLEX' value='3'/>
+<enum name='CV_FONT_HERSHEY_COMPLEX_SMALL' value='5'/>
+<enum name='CV_FONT_HERSHEY_DUPLEX' value='2'/>
+<enum name='CV_FONT_HERSHEY_PLAIN' value='1'/>
+<enum name='CV_FONT_HERSHEY_SCRIPT_COMPLEX' value='7'/>
+<enum name='CV_FONT_HERSHEY_SCRIPT_SIMPLEX' value='6'/>
+<enum name='CV_FONT_HERSHEY_SIMPLEX' value='0'/>
+<enum name='CV_FONT_HERSHEY_TRIPLEX' value='4'/>
+<enum name='CV_FONT_ITALIC' value='16'/>
+<enum name='CV_FONT_LIGHT' value='25'/>
+<enum name='CV_FONT_NORMAL' value='50'/>
+<enum name='CV_FONT_VECTOR0' value='0'/>
+<enum name='CV_FOURCC_PROMPT' value='-1'/>
+<enum name='CV_FRONT' value='1'/>
+<enum name='CV_GEMM_A_T' value='1'/>
+<enum name='CV_GEMM_B_T' value='2'/>
+<enum name='CV_GEMM_C_T' value='4'/>
+<enum name='CV_GRAPH' value='4096'/>
+<enum name='CV_GRAPH_ALL_ITEMS' value='-1'/>
+<enum name='CV_GRAPH_ANY_EDGE' value='30'/>
+<enum name='CV_GRAPH_BACKTRACKING' value='64'/>
+<enum name='CV_GRAPH_BACK_EDGE' value='4'/>
+<enum name='CV_GRAPH_CROSS_EDGE' value='16'/>
+<enum name='CV_GRAPH_FLAG_ORIENTED' value='16384'/>
+<enum name='CV_GRAPH_FORWARD_EDGE' value='8'/>
+<enum name='CV_GRAPH_FORWARD_EDGE_FLAG' value='268435456'/>
+<enum name='CV_GRAPH_ITEM_VISITED_FLAG' value='1073741824'/>
+<enum name='CV_GRAPH_NEW_TREE' value='32'/>
+<enum name='CV_GRAPH_OVER' value='-1'/>
+<enum name='CV_GRAPH_SEARCH_TREE_NODE_FLAG' value='536870912'/>
+<enum name='CV_GRAPH_TREE_EDGE' value='2'/>
+<enum name='CV_GRAPH_VERTEX' value='1'/>
+<enum name='CV_GUI_EXPANDED' value='0'/>
+<enum name='CV_GUI_NORMAL' value='16'/>
+<enum name='CV_GpuApiCallError' value='-217'/>
+<enum name='CV_GpuNotSupported' value='-216'/>
+<enum name='CV_HARDWARE_MAX_FEATURE' value='255'/>
+<enum name='CV_HIST_ARRAY' value='0'/>
+<enum name='CV_HIST_MAGIC_VAL' value='1111818240'/>
+<enum name='CV_HIST_RANGES_FLAG' value='2048'/>
+<enum name='CV_HIST_SPARSE' value='1'/>
+<enum name='CV_HIST_TREE' value='1'/>
+<enum name='CV_HIST_UNIFORM' value='1'/>
+<enum name='CV_HIST_UNIFORM_FLAG' value='1024'/>
+<enum name='CV_HeaderIsNull' value='-9'/>
+<enum name='CV_IMWRITE_JPEG_QUALITY' value='1'/>
+<enum name='CV_IMWRITE_PNG_BILEVEL' value='18'/>
+<enum name='CV_IMWRITE_PNG_COMPRESSION' value='16'/>
+<enum name='CV_IMWRITE_PNG_STRATEGY' value='17'/>
+<enum name='CV_IMWRITE_PNG_STRATEGY_DEFAULT' value='0'/>
+<enum name='CV_IMWRITE_PNG_STRATEGY_FILTERED' value='1'/>
+<enum name='CV_IMWRITE_PNG_STRATEGY_FIXED' value='4'/>
+<enum name='CV_IMWRITE_PNG_STRATEGY_HUFFMAN_ONLY' value='2'/>
+<enum name='CV_IMWRITE_PNG_STRATEGY_RLE' value='3'/>
+<enum name='CV_IMWRITE_PXM_BINARY' value='32'/>
+<enum name='CV_INPAINT_NS' value='0'/>
+<enum name='CV_INPAINT_TELEA' value='1'/>
+<enum name='CV_KMEANS_USE_INITIAL_LABELS' value='1'/>
+<enum name='CV_L1' value='2'/>
+<enum name='CV_L2' value='4'/>
+<enum name='CV_LOAD_IMAGE_ANYCOLOR' value='4'/>
+<enum name='CV_LOAD_IMAGE_ANYDEPTH' value='2'/>
+<enum name='CV_LOAD_IMAGE_COLOR' value='1'/>
+<enum name='CV_LOAD_IMAGE_GRAYSCALE' value='0'/>
+<enum name='CV_LOAD_IMAGE_UNCHANGED' value='-1'/>
+<enum name='CV_LOG2' value='0.69314718055994530941723212145818'/>
+<enum name='CV_LU' value='0'/>
+<enum name='CV_MAGIC_MASK' value='4294901760'/>
+<enum name='CV_MATND_MAGIC_VAL' value='1111687168'/>
+<enum name='CV_MAT_CN_MASK' value='4088'/>
+<enum name='CV_MAT_CONT_FLAG' value='16384'/>
+<enum name='CV_MAT_CONT_FLAG_SHIFT' value='14'/>
+<enum name='CV_MAT_DEPTH_MASK' value='7'/>
+<enum name='CV_MAT_MAGIC_VAL' value='1111621632'/>
+<enum name='CV_MAT_TYPE_MASK' value='4095'/>
+<enum name='CV_MAX_ARR' value='10'/>
+<enum name='CV_MAX_DIM' value='32'/>
+<enum name='CV_MAX_DIM_HEAP' value='1024'/>
+<enum name='CV_MINMAX' value='32'/>
+<enum name='CV_MaskIsTiled' value='-26'/>
+<enum name='CV_NODE_EMPTY' value='32'/>
+<enum name='CV_NODE_FLOAT' value='2'/>
+<enum name='CV_NODE_FLOW' value='8'/>
+<enum name='CV_NODE_INT' value='1'/>
+<enum name='CV_NODE_INTEGER' value='1'/>
+<enum name='CV_NODE_MAP' value='6'/>
+<enum name='CV_NODE_NAMED' value='64'/>
+<enum name='CV_NODE_NONE' value='0'/>
+<enum name='CV_NODE_REAL' value='2'/>
+<enum name='CV_NODE_REF' value='4'/>
+<enum name='CV_NODE_SEQ' value='5'/>
+<enum name='CV_NODE_SEQ_SIMPLE' value='256'/>
+<enum name='CV_NODE_STR' value='3'/>
+<enum name='CV_NODE_STRING' value='3'/>
+<enum name='CV_NODE_TYPE_MASK' value='7'/>
+<enum name='CV_NODE_USER' value='16'/>
+<enum name='CV_NORMAL' value='16'/>
+<enum name='CV_NORM_MASK' value='7'/>
+<enum name='CV_NO_CN_CHECK' value='2'/>
+<enum name='CV_NO_DEPTH_CHECK' value='1'/>
+<enum name='CV_NO_SIZE_CHECK' value='4'/>
+<enum name='CV_ORIENTED_GRAPH' value='20480'/>
+<enum name='CV_OpenCLDoubleNotSupported' value='-220'/>
+<enum name='CV_OpenCLInitError' value='-221'/>
+<enum name='CV_OpenCLNoAMDBlasFft' value='-222'/>
+<enum name='CV_OpenGlApiCallError' value='-219'/>
+<enum name='CV_OpenGlNotSupported' value='-218'/>
+<enum name='CV_PCA_DATA_AS_COL' value='1'/>
+<enum name='CV_PCA_DATA_AS_ROW' value='0'/>
+<enum name='CV_PCA_USE_AVG' value='2'/>
+<enum name='CV_PI' value='3.1415926535897932384626433832795'/>
+<enum name='CV_PUSH_BUTTON' value='0'/>
+<enum name='CV_QR' value='4'/>
+<enum name='CV_RADIOBOX' value='2'/>
+<enum name='CV_RAND_NORMAL' value='1'/>
+<enum name='CV_RAND_UNI' value='0'/>
+<enum name='CV_REDUCE_AVG' value='1'/>
+<enum name='CV_REDUCE_MAX' value='2'/>
+<enum name='CV_REDUCE_MIN' value='3'/>
+<enum name='CV_REDUCE_SUM' value='0'/>
+<enum name='CV_RELATIVE' value='8'/>
+<enum name='CV_RELATIVE_C' value='9'/>
+<enum name='CV_RELATIVE_L1' value='10'/>
+<enum name='CV_RELATIVE_L2' value='12'/>
+<enum name='CV_RNG_COEFF' value='4164903690'/>
+<enum name='CV_SEQ_CHAIN' value='4096'/>
+<enum name='CV_SEQ_CHAIN_CONTOUR' value='20480'/>
+<enum name='CV_SEQ_CONNECTED_COMP' value='0'/>
+<enum name='CV_SEQ_CONTOUR' value='20492'/>
+<enum name='CV_SEQ_ELTYPE_BITS' value='12'/>
+<enum name='CV_SEQ_ELTYPE_CODE' value='0'/>
+<enum name='CV_SEQ_ELTYPE_CONNECTED_COMP' value='0'/>
+<enum name='CV_SEQ_ELTYPE_GENERIC' value='0'/>
+<enum name='CV_SEQ_ELTYPE_GRAPH_EDGE' value='0'/>
+<enum name='CV_SEQ_ELTYPE_GRAPH_VERTEX' value='0'/>
+<enum name='CV_SEQ_ELTYPE_INDEX' value='4'/>
+<enum name='CV_SEQ_ELTYPE_MASK' value='4095'/>
+<enum name='CV_SEQ_ELTYPE_POINT' value='12'/>
+<enum name='CV_SEQ_ELTYPE_POINT3D' value='21'/>
+<enum name='CV_SEQ_ELTYPE_PPOINT' value='7'/>
+<enum name='CV_SEQ_ELTYPE_PTR' value='7'/>
+<enum name='CV_SEQ_ELTYPE_TRIAN_ATR' value='0'/>
+<enum name='CV_SEQ_FLAG_CLOSED' value='16384'/>
+<enum name='CV_SEQ_FLAG_CONVEX' value='0'/>
+<enum name='CV_SEQ_FLAG_HOLE' value='32768'/>
+<enum name='CV_SEQ_FLAG_SHIFT' value='14'/>
+<enum name='CV_SEQ_FLAG_SIMPLE' value='0'/>
+<enum name='CV_SEQ_INDEX' value='4'/>
+<enum name='CV_SEQ_KIND_BIN_TREE' value='8192'/>
+<enum name='CV_SEQ_KIND_BITS' value='2'/>
+<enum name='CV_SEQ_KIND_CURVE' value='4096'/>
+<enum name='CV_SEQ_KIND_GENERIC' value='0'/>
+<enum name='CV_SEQ_KIND_GRAPH' value='4096'/>
+<enum name='CV_SEQ_KIND_MASK' value='12288'/>
+<enum name='CV_SEQ_KIND_SUBDIV2D' value='8192'/>
+<enum name='CV_SEQ_MAGIC_VAL' value='1117323264'/>
+<enum name='CV_SEQ_POINT3D_SET' value='21'/>
+<enum name='CV_SEQ_POINT_SET' value='12'/>
+<enum name='CV_SEQ_POLYGON' value='20492'/>
+<enum name='CV_SEQ_POLYGON_TREE' value='8192'/>
+<enum name='CV_SEQ_POLYLINE' value='4108'/>
+<enum name='CV_SEQ_SIMPLE_POLYGON' value='20492'/>
+<enum name='CV_SET_ELEM_FREE_FLAG' value='-2147483648'/>
+<enum name='CV_SET_ELEM_IDX_MASK' value='67108863'/>
+<enum name='CV_SET_MAGIC_VAL' value='1117257728'/>
+<enum name='CV_SORT_ASCENDING' value='0'/>
+<enum name='CV_SORT_DESCENDING' value='16'/>
+<enum name='CV_SORT_EVERY_COLUMN' value='1'/>
+<enum name='CV_SORT_EVERY_ROW' value='0'/>
+<enum name='CV_SPARSE_MAT_MAGIC_VAL' value='1111752704'/>
+<enum name='CV_STORAGE_APPEND' value='2'/>
+<enum name='CV_STORAGE_FORMAT_AUTO' value='0'/>
+<enum name='CV_STORAGE_FORMAT_MASK' value='56'/>
+<enum name='CV_STORAGE_FORMAT_XML' value='8'/>
+<enum name='CV_STORAGE_FORMAT_YAML' value='16'/>
+<enum name='CV_STORAGE_MAGIC_VAL' value='1116274688'/>
+<enum name='CV_STORAGE_MEMORY' value='4'/>
+<enum name='CV_STORAGE_READ' value='0'/>
+<enum name='CV_STORAGE_WRITE' value='1'/>
+<enum name='CV_STORAGE_WRITE_BINARY' value='1'/>
+<enum name='CV_STORAGE_WRITE_TEXT' value='1'/>
+<enum name='CV_STYLE_ITALIC' value='1'/>
+<enum name='CV_STYLE_NORMAL' value='0'/>
+<enum name='CV_STYLE_OBLIQUE' value='2'/>
+<enum name='CV_SUBMAT_FLAG' value='32768'/>
+<enum name='CV_SUBMAT_FLAG_SHIFT' value='15'/>
+<enum name='CV_SVD' value='1'/>
+<enum name='CV_SVD_MODIFY_A' value='1'/>
+<enum name='CV_SVD_SYM' value='2'/>
+<enum name='CV_SVD_U_T' value='2'/>
+<enum name='CV_SVD_V_T' value='4'/>
+<enum name='CV_StsAssert' value='-215'/>
+<enum name='CV_StsAutoTrace' value='-8'/>
+<enum name='CV_StsBackTrace' value='-1'/>
+<enum name='CV_StsBadArg' value='-5'/>
+<enum name='CV_StsBadFlag' value='-206'/>
+<enum name='CV_StsBadFunc' value='-6'/>
+<enum name='CV_StsBadMask' value='-208'/>
+<enum name='CV_StsBadMemBlock' value='-214'/>
+<enum name='CV_StsBadPoint' value='-207'/>
+<enum name='CV_StsBadSize' value='-201'/>
+<enum name='CV_StsDivByZero' value='-202'/>
+<enum name='CV_StsError' value='-2'/>
+<enum name='CV_StsFilterOffsetErr' value='-31'/>
+<enum name='CV_StsFilterStructContentErr' value='-29'/>
+<enum name='CV_StsInplaceNotSupported' value='-203'/>
+<enum name='CV_StsInternal' value='-3'/>
+<enum name='CV_StsKernelStructContentErr' value='-30'/>
+<enum name='CV_StsNoConv' value='-7'/>
+<enum name='CV_StsNoMem' value='-4'/>
+<enum name='CV_StsNotImplemented' value='-213'/>
+<enum name='CV_StsNullPtr' value='-27'/>
+<enum name='CV_StsObjectNotFound' value='-204'/>
+<enum name='CV_StsOk' value='0'/>
+<enum name='CV_StsOutOfRange' value='-211'/>
+<enum name='CV_StsParseError' value='-212'/>
+<enum name='CV_StsUnmatchedFormats' value='-205'/>
+<enum name='CV_StsUnmatchedSizes' value='-209'/>
+<enum name='CV_StsUnsupportedFormat' value='-210'/>
+<enum name='CV_StsVecLengthErr' value='-28'/>
+<enum name='CV_TERMCRIT_EPS' value='2'/>
+<enum name='CV_TERMCRIT_ITER' value='1'/>
+<enum name='CV_TERMCRIT_NUMBER' value='1'/>
+<enum name='CV_TYZX_COLOR' value='402'/>
+<enum name='CV_TYZX_LEFT' value='400'/>
+<enum name='CV_TYZX_RIGHT' value='401'/>
+<enum name='CV_TYZX_Z' value='403'/>
+<enum name='CV_USRTYPE1' value='7'/>
+<enum name='CV_WHOLE_SEQ_END_INDEX' value='1073741823'/>
+<enum name='CV_WINDOW_AUTOSIZE' value='1'/>
+<enum name='CV_WINDOW_FREERATIO' value='256'/>
+<enum name='CV_WINDOW_FULLSCREEN' value='1'/>
+<enum name='CV_WINDOW_KEEPRATIO' value='0'/>
+<enum name='CV_WINDOW_NORMAL' value='0'/>
+<enum name='CV_WINDOW_OPENGL' value='4096'/>
+<enum name='CV_WND_PROP_ASPECTRATIO' value='2'/>
+<enum name='CV_WND_PROP_AUTOSIZE' value='1'/>
+<enum name='CV_WND_PROP_FULLSCREEN' value='0'/>
+<enum name='CV_WND_PROP_OPENGL' value='3'/>
+<enum name='FLANN_USE_BOOST' value='0'/>
+<enum name='HG_AUTOSIZE' value='1'/>
+<enum name='IPL_ALIGN_16BYTES' value='16'/>
+<enum name='IPL_ALIGN_32BYTES' value='32'/>
+<enum name='IPL_ALIGN_4BYTES' value='4'/>
+<enum name='IPL_ALIGN_8BYTES' value='8'/>
+<enum name='IPL_ALIGN_DWORD' value='4'/>
+<enum name='IPL_ALIGN_QWORD' value='8'/>
+<enum name='IPL_BORDER_CONSTANT' value='0'/>
+<enum name='IPL_BORDER_REFLECT' value='2'/>
+<enum name='IPL_BORDER_REFLECT_101' value='4'/>
+<enum name='IPL_BORDER_REPLICATE' value='1'/>
+<enum name='IPL_BORDER_TRANSPARENT' value='5'/>
+<enum name='IPL_BORDER_WRAP' value='3'/>
+<enum name='IPL_DATA_ORDER_PIXEL' value='0'/>
+<enum name='IPL_DATA_ORDER_PLANE' value='1'/>
+<enum name='IPL_DEPTH_16S' value='2147483664'/>
+<enum name='IPL_DEPTH_16U' value='16'/>
+<enum name='IPL_DEPTH_1U' value='1'/>
+<enum name='IPL_DEPTH_32F' value='32'/>
+<enum name='IPL_DEPTH_32S' value='2147483680'/>
+<enum name='IPL_DEPTH_64F' value='64'/>
+<enum name='IPL_DEPTH_8S' value='2147483656'/>
+<enum name='IPL_DEPTH_8U' value='8'/>
+<enum name='IPL_DEPTH_SIGN' value='2147483648'/>
+<enum name='IPL_IMAGE_DATA' value='2'/>
+<enum name='IPL_IMAGE_HEADER' value='1'/>
+<enum name='IPL_IMAGE_MAGIC_VAL' value='112' value64='144'/>
+<enum name='IPL_IMAGE_ROI' value='4'/>
+<enum name='IPL_ORIGIN_BL' value='1'/>
+<enum name='IPL_ORIGIN_TL' value='0'/>
+<enum name='USE_UNORDERED_MAP' value='0'/>
+<function inline='true' name='CV_FOURCC'>
+<arg declared_type='char' name='c1' type='c'/>
+<arg declared_type='char' name='c2' type='c'/>
+<arg declared_type='char' name='c3' type='c'/>
+<arg declared_type='char' name='c4' type='c'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='CV_IS_MAT'>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='CV_IS_MATND'>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='MatToUIImage'>
+<arg const='true' declared_type='int' name='cv' type='i'/>
+<retval declared_type='UIImage*' type='@'/>
+</function>
+<function name='UIImageToMat'>
+<arg const='true' declared_type='UIImage*' name='image' type='@'/>
+<arg declared_type='int' name='cv' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cv2DRotationMatrix'>
+<arg declared_type='CvPoint2D32f' name='center' type='{CvPoint2D32f=ff}'/>
+<arg declared_type='double' name='angle' type='d'/>
+<arg declared_type='double' name='scale' type='d'/>
+<arg declared_type='CvMat*' name='map_matrix' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+<retval declared_type='CvMat*' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+</function>
+<function name='cvAcc'>
+<arg const='true' declared_type='CvArr*' name='image' type='^v'/>
+<arg declared_type='CvArr*' name='sum' type='^v'/>
+<arg const='true' declared_type='CvArr*' name='mask' type='^v'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvAdaptiveThreshold'>
+<arg const='true' declared_type='CvArr*' name='src' type='^v'/>
+<arg declared_type='CvArr*' name='dst' type='^v'/>
+<arg declared_type='double' name='max_value' type='d'/>
+<arg declared_type='int' name='adaptive_method' type='i'/>
+<arg declared_type='int' name='threshold_type' type='i'/>
+<arg declared_type='int' name='block_size' type='i'/>
+<arg declared_type='double' name='param1' type='d'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvAddS'>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='cvAddText'>
+<arg const='true' declared_type='CvArr*' name='img' type='^v'/>
+<arg const='true' declared_type='char*' name='text' type='*'/>
+<arg declared_type='CvPoint' name='org' type='{CvPoint=ii}'/>
+<arg declared_type='CvFont*' name='arg2' type='^{CvFont=*ii^i^i^ifffifi}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvApproxChains'>
+<arg declared_type='CvSeq*' name='src_seq' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+<arg declared_type='CvMemStorage*' name='storage' type='^{CvMemStorage=i^{CvMemBlock}^{CvMemBlock}^{CvMemStorage}ii}'/>
+<arg declared_type='int' name='method' type='i'/>
+<arg declared_type='double' name='parameter' type='d'/>
+<arg declared_type='int' name='minimal_perimeter' type='i'/>
+<arg declared_type='int' name='recursive' type='i'/>
+<retval declared_type='CvSeq*' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+</function>
+<function name='cvApproxPoly'>
+<arg const='true' declared_type='void*' name='src_seq' type='^v'/>
+<arg declared_type='int' name='header_size' type='i'/>
+<arg declared_type='CvMemStorage*' name='storage' type='^{CvMemStorage=i^{CvMemBlock}^{CvMemBlock}^{CvMemStorage}ii}'/>
+<arg declared_type='int' name='method' type='i'/>
+<arg declared_type='double' name='eps' type='d'/>
+<arg declared_type='int' name='recursive' type='i'/>
+<retval declared_type='CvSeq*' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+</function>
+<function name='cvArcLength'>
+<arg const='true' declared_type='void*' name='curve' type='^v'/>
+<arg declared_type='CvSlice' name='slice' type='{CvSlice=ii}'/>
+<arg declared_type='int' name='is_closed' type='i'/>
+<retval declared_type='double' type='d'/>
+</function>
+<function inline='true' name='cvAttrList'>
+<arg const='true' declared_type='char**' name='attr' type='^*'/>
+<arg declared_type='CvAttrList*' name='next' type='^{CvAttrList=^*^{CvAttrList}}'/>
+<retval declared_type='CvAttrList' type='{CvAttrList=^*^{CvAttrList}}'/>
+</function>
+<function name='cvBoundingRect'>
+<arg declared_type='CvArr*' name='points' type='^v'/>
+<arg declared_type='int' name='update' type='i'/>
+<retval declared_type='CvRect' type='{CvRect=iiii}'/>
+</function>
+<function name='cvBoxPoints'>
+<arg declared_type='CvBox2D' name='box' type='{CvBox2D={CvPoint2D32f=ff}{CvSize2D32f=ff}f}'/>
+<arg declared_type='CvPoint2D32f*' name='pt' type='^{CvPoint2D32f=ff}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvCalcArrBackProject'>
+<arg declared_type='CvArr**' name='image' type='^^v'/>
+<arg declared_type='CvArr*' name='dst' type='^v'/>
+<arg const='true' declared_type='CvHistogram*' name='hist' type='^{CvHistogram=i^v[32[2f]]^^f{CvMatND=ii^ii(?=*^f^d^i^s)[32{?=ii}]}}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvCalcArrBackProjectPatch'>
+<arg declared_type='CvArr**' name='image' type='^^v'/>
+<arg declared_type='CvArr*' name='dst' type='^v'/>
+<arg declared_type='CvSize' name='range' type='{CvSize=ii}'/>
+<arg declared_type='CvHistogram*' name='hist' type='^{CvHistogram=i^v[32[2f]]^^f{CvMatND=ii^ii(?=*^f^d^i^s)[32{?=ii}]}}'/>
+<arg declared_type='int' name='method' type='i'/>
+<arg declared_type='double' name='factor' type='d'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvCalcArrHist'>
+<arg declared_type='CvArr**' name='arr' type='^^v'/>
+<arg declared_type='CvHistogram*' name='hist' type='^{CvHistogram=i^v[32[2f]]^^f{CvMatND=ii^ii(?=*^f^d^i^s)[32{?=ii}]}}'/>
+<arg declared_type='int' name='accumulate' type='i'/>
+<arg const='true' declared_type='CvArr*' name='mask' type='^v'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvCalcBayesianProb'>
+<arg declared_type='CvHistogram**' name='src' type='^^{CvHistogram}'/>
+<arg declared_type='int' name='number' type='i'/>
+<arg declared_type='CvHistogram**' name='dst' type='^^{CvHistogram}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvCalcEMD2'>
+<arg const='true' declared_type='CvArr*' name='signature1' type='^v'/>
+<arg const='true' declared_type='CvArr*' name='signature2' type='^v'/>
+<arg declared_type='int' name='distance_type' type='i'/>
+<arg declared_type='int' name='distance_func' type='i'/>
+<arg const='true' declared_type='CvArr*' name='cost_matrix' type='^v'/>
+<arg declared_type='CvArr*' name='flow' type='^v'/>
+<arg declared_type='float*' name='lower_bound' type='^f'/>
+<arg declared_type='void*' name='userdata' type='^v'/>
+<retval declared_type='float' type='f'/>
+</function>
+<function inline='true' name='cvCalcHist'>
+<arg declared_type='IplImage**' name='image' type='^^{_IplImage}'/>
+<arg declared_type='CvHistogram*' name='hist' type='^{CvHistogram=i^v[32[2f]]^^f{CvMatND=ii^ii(?=*^f^d^i^s)[32{?=ii}]}}'/>
+<arg declared_type='int' name='accumulate' type='i'/>
+<arg const='true' declared_type='CvArr*' name='mask' type='^v'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvCalcProbDensity'>
+<arg const='true' declared_type='CvHistogram*' name='hist1' type='^{CvHistogram=i^v[32[2f]]^^f{CvMatND=ii^ii(?=*^f^d^i^s)[32{?=ii}]}}'/>
+<arg const='true' declared_type='CvHistogram*' name='hist2' type='^{CvHistogram=i^v[32[2f]]^^f{CvMatND=ii^ii(?=*^f^d^i^s)[32{?=ii}]}}'/>
+<arg declared_type='CvHistogram*' name='dst_hist' type='^{CvHistogram=i^v[32[2f]]^^f{CvMatND=ii^ii(?=*^f^d^i^s)[32{?=ii}]}}'/>
+<arg declared_type='double' name='scale' type='d'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvCanny'>
+<arg const='true' declared_type='CvArr*' name='image' type='^v'/>
+<arg declared_type='CvArr*' name='edges' type='^v'/>
+<arg declared_type='double' name='threshold1' type='d'/>
+<arg declared_type='double' name='threshold2' type='d'/>
+<arg declared_type='int' name='aperture_size' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function inline='true' name='cvCeil'>
+<arg declared_type='double' name='value' type='d'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='cvCheckContourConvexity'>
+<arg const='true' declared_type='CvArr*' name='contour' type='^v'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='cvClearHist'>
+<arg declared_type='CvHistogram*' name='hist' type='^{CvHistogram=i^v[32[2f]]^^f{CvMatND=ii^ii(?=*^f^d^i^s)[32{?=ii}]}}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function inline='true' name='cvCloneSeq'>
+<arg const='true' declared_type='int*' name='seq' type='^i'/>
+<arg declared_type='int*' name='storage' type='^i'/>
+<retval declared_type='int*' type='^i'/>
+</function>
+<function name='cvCompareHist'>
+<arg const='true' declared_type='CvHistogram*' name='hist1' type='^{CvHistogram=i^v[32[2f]]^^f{CvMatND=ii^ii(?=*^f^d^i^s)[32{?=ii}]}}'/>
+<arg const='true' declared_type='CvHistogram*' name='hist2' type='^{CvHistogram=i^v[32[2f]]^^f{CvMatND=ii^ii(?=*^f^d^i^s)[32{?=ii}]}}'/>
+<arg declared_type='int' name='method' type='i'/>
+<retval declared_type='double' type='d'/>
+</function>
+<function name='cvContourArea'>
+<arg const='true' declared_type='CvArr*' name='contour' type='^v'/>
+<arg declared_type='CvSlice' name='slice' type='{CvSlice=ii}'/>
+<arg declared_type='int' name='oriented' type='i'/>
+<retval declared_type='double' type='d'/>
+</function>
+<function inline='true' name='cvContourPerimeter'>
+<arg const='true' declared_type='void*' name='contour' type='^v'/>
+<retval declared_type='double' type='d'/>
+</function>
+<function name='cvConvertImage'>
+<arg const='true' declared_type='CvArr*' name='src' type='^v'/>
+<arg declared_type='CvArr*' name='dst' type='^v'/>
+<arg declared_type='int' name='flags' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvConvertMaps'>
+<arg const='true' declared_type='CvArr*' name='mapx' type='^v'/>
+<arg const='true' declared_type='CvArr*' name='mapy' type='^v'/>
+<arg declared_type='CvArr*' name='mapxy' type='^v'/>
+<arg declared_type='CvArr*' name='mapalpha' type='^v'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvConvexHull2'>
+<arg const='true' declared_type='CvArr*' name='input' type='^v'/>
+<arg declared_type='void*' name='hull_storage' type='^v'/>
+<arg declared_type='int' name='orientation' type='i'/>
+<arg declared_type='int' name='return_points' type='i'/>
+<retval declared_type='CvSeq*' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+</function>
+<function name='cvConvexityDefects'>
+<arg const='true' declared_type='CvArr*' name='contour' type='^v'/>
+<arg const='true' declared_type='CvArr*' name='convexhull' type='^v'/>
+<arg declared_type='CvMemStorage*' name='storage' type='^{CvMemStorage=i^{CvMemBlock}^{CvMemBlock}^{CvMemStorage}ii}'/>
+<retval declared_type='CvSeq*' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+</function>
+<function name='cvCopyHist'>
+<arg const='true' declared_type='CvHistogram*' name='src' type='^{CvHistogram=i^v[32[2f]]^^f{CvMatND=ii^ii(?=*^f^d^i^s)[32{?=ii}]}}'/>
+<arg declared_type='CvHistogram**' name='dst' type='^^{CvHistogram}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvCopyMakeBorder'>
+<arg const='true' declared_type='CvArr*' name='src' type='^v'/>
+<arg declared_type='CvArr*' name='dst' type='^v'/>
+<arg declared_type='CvPoint' name='offset' type='{CvPoint=ii}'/>
+<arg declared_type='int' name='bordertype' type='i'/>
+<arg declared_type='CvScalar' name='value' type='{CvScalar=[4d]}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvCornerEigenValsAndVecs'>
+<arg const='true' declared_type='CvArr*' name='image' type='^v'/>
+<arg declared_type='CvArr*' name='eigenvv' type='^v'/>
+<arg declared_type='int' name='block_size' type='i'/>
+<arg declared_type='int' name='aperture_size' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvCornerHarris'>
+<arg const='true' declared_type='CvArr*' name='image' type='^v'/>
+<arg declared_type='CvArr*' name='harris_responce' type='^v'/>
+<arg declared_type='int' name='block_size' type='i'/>
+<arg declared_type='int' name='aperture_size' type='i'/>
+<arg declared_type='double' name='k' type='d'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvCornerMinEigenVal'>
+<arg const='true' declared_type='CvArr*' name='image' type='^v'/>
+<arg declared_type='CvArr*' name='eigenval' type='^v'/>
+<arg declared_type='int' name='block_size' type='i'/>
+<arg declared_type='int' name='aperture_size' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvCreateButton'>
+<arg const='true' declared_type='char*' name='button_name' type='*'/>
+<arg declared_type='CvButtonCallback' function_pointer='true' name='on_change' type='^?'>
+<arg declared_type='int' type='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg declared_type='void*' name='userdata' type='^v'/>
+<arg declared_type='int' name='button_type' type='i'/>
+<arg declared_type='int' name='initial_button_state' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='cvCreateCameraCapture'>
+<arg declared_type='int' name='index' type='i'/>
+<retval declared_type='CvCapture*' type='^{CvCapture=}'/>
+</function>
+<function name='cvCreateFileCapture'>
+<arg const='true' declared_type='char*' name='filename' type='*'/>
+<retval declared_type='CvCapture*' type='^{CvCapture=}'/>
+</function>
+<function name='cvCreateHist'>
+<arg declared_type='int' name='dims' type='i'/>
+<arg declared_type='int*' name='sizes' type='^i'/>
+<arg declared_type='int' name='type' type='i'/>
+<arg declared_type='float**' name='ranges' type='^^f'/>
+<arg declared_type='int' name='uniform' type='i'/>
+<retval declared_type='CvHistogram*' type='^{CvHistogram=i^v[32[2f]]^^f{CvMatND=ii^ii(?=*^f^d^i^s)[32{?=ii}]}}'/>
+</function>
+<function name='cvCreatePyramid'>
+<arg const='true' declared_type='CvArr*' name='img' type='^v'/>
+<arg declared_type='int' name='extra_layers' type='i'/>
+<arg declared_type='double' name='rate' type='d'/>
+<arg const='true' declared_type='CvSize*' name='layer_sizes' type='^{CvSize=ii}'/>
+<arg declared_type='CvArr*' name='bufarr' type='^v'/>
+<arg declared_type='int' name='calc' type='i'/>
+<arg declared_type='int' name='filter' type='i'/>
+<retval declared_type='CvMat**' type='^^{CvMat}'/>
+</function>
+<function name='cvCreateStructuringElementEx'>
+<arg declared_type='int' name='cols' type='i'/>
+<arg declared_type='int' name='rows' type='i'/>
+<arg declared_type='int' name='anchor_x' type='i'/>
+<arg declared_type='int' name='anchor_y' type='i'/>
+<arg declared_type='int' name='shape' type='i'/>
+<arg declared_type='int*' name='values' type='^i'/>
+<retval declared_type='IplConvKernel*' type='^{_IplConvKernel=iiii^ii}'/>
+</function>
+<function name='cvCreateTrackbar'>
+<arg const='true' declared_type='char*' name='trackbar_name' type='*'/>
+<arg const='true' declared_type='char*' name='window_name' type='*'/>
+<arg declared_type='int*' name='value' type='^i'/>
+<arg declared_type='int' name='count' type='i'/>
+<arg declared_type='CvTrackbarCallback' function_pointer='true' name='on_change' type='^?'>
+<arg declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='cvCreateTrackbar2'>
+<arg const='true' declared_type='char*' name='trackbar_name' type='*'/>
+<arg const='true' declared_type='char*' name='window_name' type='*'/>
+<arg declared_type='int*' name='value' type='^i'/>
+<arg declared_type='int' name='count' type='i'/>
+<arg declared_type='CvTrackbarCallback2' function_pointer='true' name='on_change' type='^?'>
+<arg declared_type='int' type='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg declared_type='void*' name='userdata' type='^v'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='cvCreateVideoWriter'>
+<arg const='true' declared_type='char*' name='filename' type='*'/>
+<arg declared_type='int' name='fourcc' type='i'/>
+<arg declared_type='double' name='fps' type='d'/>
+<arg declared_type='CvSize' name='frame_size' type='{CvSize=ii}'/>
+<arg declared_type='int' name='is_color' type='i'/>
+<retval declared_type='CvVideoWriter*' type='^{CvVideoWriter=}'/>
+</function>
+<function name='cvCvtColor'>
+<arg const='true' declared_type='CvArr*' name='src' type='^v'/>
+<arg declared_type='CvArr*' name='dst' type='^v'/>
+<arg declared_type='int' name='code' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function inline='true' name='cvDecRefData'>
+<arg declared_type='int*' name='arr' type='^i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvDecodeImage'>
+<arg const='true' declared_type='CvMat*' name='buf' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+<arg declared_type='int' name='iscolor' type='i'/>
+<retval declared_type='IplImage*' type='^{_IplImage=iiiii[4c][4c]iiiii^{_IplROI}^{_IplImage}^v^{_IplTileInfo}i*i[4i][4i]*}'/>
+</function>
+<function name='cvDecodeImageM'>
+<arg const='true' declared_type='CvMat*' name='buf' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+<arg declared_type='int' name='iscolor' type='i'/>
+<retval declared_type='CvMat*' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+</function>
+<function name='cvDestroyAllWindows'>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvDestroyWindow'>
+<arg const='true' declared_type='char*' name='name' type='*'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvDilate'>
+<arg const='true' declared_type='CvArr*' name='src' type='^v'/>
+<arg declared_type='CvArr*' name='dst' type='^v'/>
+<arg declared_type='IplConvKernel*' name='element' type='^{_IplConvKernel=iiii^ii}'/>
+<arg declared_type='int' name='iterations' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvDisplayOverlay'>
+<arg const='true' declared_type='char*' name='name' type='*'/>
+<arg const='true' declared_type='char*' name='text' type='*'/>
+<arg declared_type='int' name='delayms' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvDisplayStatusBar'>
+<arg const='true' declared_type='char*' name='name' type='*'/>
+<arg const='true' declared_type='char*' name='text' type='*'/>
+<arg declared_type='int' name='delayms' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvDistTransform'>
+<arg const='true' declared_type='CvArr*' name='src' type='^v'/>
+<arg declared_type='CvArr*' name='dst' type='^v'/>
+<arg declared_type='int' name='distance_type' type='i'/>
+<arg declared_type='int' name='mask_size' type='i'/>
+<arg const='true' declared_type='float*' name='mask' type='^f'/>
+<arg declared_type='CvArr*' name='labels' type='^v'/>
+<arg declared_type='int' name='labelType' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvEllipse'>
+<retval declared_type='int' type='i'/>
+</function>
+<function inline='true' name='cvEllipseBox'>
+<arg declared_type='int*' name='img' type='^i'/>
+<arg declared_type='int' name='box' type='i'/>
+<arg declared_type='int' name='color' type='i'/>
+<arg declared_type='int' name='thickness' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvEncodeImage'>
+<arg const='true' declared_type='char*' name='ext' type='*'/>
+<arg const='true' declared_type='CvArr*' name='image' type='^v'/>
+<arg const='true' declared_type='int*' name='params' type='^i'/>
+<retval declared_type='CvMat*' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+</function>
+<function name='cvEndFindContours'>
+<arg declared_type='int*' name='scanner' type='^i'/>
+<retval declared_type='CvSeq*' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+</function>
+<function name='cvEqualizeHist'>
+<arg const='true' declared_type='CvArr*' name='src' type='^v'/>
+<arg declared_type='CvArr*' name='dst' type='^v'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvErode'>
+<arg const='true' declared_type='CvArr*' name='src' type='^v'/>
+<arg declared_type='CvArr*' name='dst' type='^v'/>
+<arg declared_type='IplConvKernel*' name='element' type='^{_IplConvKernel=iiii^ii}'/>
+<arg declared_type='int' name='iterations' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvFilter2D'>
+<arg const='true' declared_type='CvArr*' name='src' type='^v'/>
+<arg declared_type='CvArr*' name='dst' type='^v'/>
+<arg const='true' declared_type='CvMat*' name='kernel' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+<arg declared_type='CvPoint' name='anchor' type='{CvPoint=ii}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvFindContours'>
+<arg declared_type='CvArr*' name='image' type='^v'/>
+<arg declared_type='CvMemStorage*' name='storage' type='^{CvMemStorage=i^{CvMemBlock}^{CvMemBlock}^{CvMemStorage}ii}'/>
+<arg declared_type='CvSeq**' name='first_contour' type='^^{CvSeq}'/>
+<arg declared_type='int' name='header_size' type='i'/>
+<arg declared_type='int' name='mode' type='i'/>
+<arg declared_type='int' name='method' type='i'/>
+<arg declared_type='CvPoint' name='offset' type='{CvPoint=ii}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='cvFindCornerSubPix'>
+<arg const='true' declared_type='CvArr*' name='image' type='^v'/>
+<arg declared_type='CvPoint2D32f*' name='corners' type='^{CvPoint2D32f=ff}'/>
+<arg declared_type='int' name='count' type='i'/>
+<arg declared_type='CvSize' name='win' type='{CvSize=ii}'/>
+<arg declared_type='CvSize' name='zero_zone' type='{CvSize=ii}'/>
+<arg declared_type='CvTermCriteria' name='criteria' type='{CvTermCriteria=iid}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvFindNextContour'>
+<arg declared_type='int' name='scanner' type='i'/>
+<retval declared_type='CvSeq*' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+</function>
+<function name='cvFitEllipse2'>
+<arg const='true' declared_type='CvArr*' name='points' type='^v'/>
+<retval declared_type='CvBox2D' type='{CvBox2D={CvPoint2D32f=ff}{CvSize2D32f=ff}f}'/>
+</function>
+<function name='cvFitLine'>
+<arg const='true' declared_type='CvArr*' name='points' type='^v'/>
+<arg declared_type='int' name='dist_type' type='i'/>
+<arg declared_type='double' name='param' type='d'/>
+<arg declared_type='double' name='reps' type='d'/>
+<arg declared_type='double' name='aeps' type='d'/>
+<arg declared_type='float*' name='line' type='^f'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvFloodFill'>
+<arg declared_type='CvArr*' name='image' type='^v'/>
+<arg declared_type='CvPoint' name='seed_point' type='{CvPoint=ii}'/>
+<arg declared_type='CvScalar' name='new_val' type='{CvScalar=[4d]}'/>
+<arg declared_type='CvScalar' name='lo_diff' type='{CvScalar=[4d]}'/>
+<arg declared_type='CvScalar' name='up_diff' type='{CvScalar=[4d]}'/>
+<arg declared_type='int*' name='comp' type='^i'/>
+<arg declared_type='int' name='flags' type='i'/>
+<arg declared_type='CvArr*' name='mask' type='^v'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function inline='true' name='cvFloor'>
+<arg declared_type='double' name='value' type='d'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function inline='true' name='cvFont'>
+<arg declared_type='double' name='scale' type='d'/>
+<arg declared_type='int' name='thickness' type='i'/>
+<retval declared_type='CvFont' type='{CvFont=*ii^i^i^ifffifi}'/>
+</function>
+<function name='cvFontQt'>
+<arg const='true' declared_type='char*' name='nameFont' type='*'/>
+<arg declared_type='int' name='pointSize' type='i'/>
+<arg declared_type='CvScalar' name='color' type='{CvScalar=[4d]}'/>
+<arg declared_type='int' name='weight' type='i'/>
+<arg declared_type='int' name='style' type='i'/>
+<arg declared_type='int' name='spacing' type='i'/>
+<retval declared_type='CvFont' type='{CvFont=*ii^i^i^ifffifi}'/>
+</function>
+<function name='cvFree_'>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='cvGetAffineTransform'>
+<arg const='true' declared_type='CvPoint2D32f*' name='src' type='^{CvPoint2D32f=ff}'/>
+<arg const='true' declared_type='CvPoint2D32f*' name='dst' type='^{CvPoint2D32f=ff}'/>
+<arg declared_type='CvMat*' name='map_matrix' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+<retval declared_type='CvMat*' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+</function>
+<function name='cvGetCaptureDomain'>
+<arg declared_type='CvCapture*' name='capture' type='^{CvCapture=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='cvGetCaptureProperty'>
+<arg declared_type='CvCapture*' name='capture' type='^{CvCapture=}'/>
+<arg declared_type='int' name='property_id' type='i'/>
+<retval declared_type='double' type='d'/>
+</function>
+<function name='cvGetCentralMoment'>
+<arg declared_type='int*' name='moments' type='^i'/>
+<arg declared_type='int' name='x_order' type='i'/>
+<arg declared_type='int' name='y_order' type='i'/>
+<retval declared_type='double' type='d'/>
+</function>
+<function inline='true' name='cvGetCol'>
+<arg const='true' declared_type='int*' name='arr' type='^i'/>
+<arg declared_type='int*' name='submat' type='^i'/>
+<arg declared_type='int' name='col' type='i'/>
+<retval declared_type='int*' type='^i'/>
+</function>
+<function name='cvGetCols'>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='cvGetHuMoments'>
+<arg declared_type='int*' name='moments' type='^i'/>
+<arg declared_type='int*' name='hu_moments' type='^i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvGetMinMaxHistValue'>
+<arg const='true' declared_type='CvHistogram*' name='hist' type='^{CvHistogram=i^v[32[2f]]^^f{CvMatND=ii^ii(?=*^f^d^i^s)[32{?=ii}]}}'/>
+<arg declared_type='float*' name='min_value' type='^f'/>
+<arg declared_type='float*' name='max_value' type='^f'/>
+<arg declared_type='int*' name='min_idx' type='^i'/>
+<arg declared_type='int*' name='max_idx' type='^i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function inline='true' name='cvGetNextSparseNode'>
+<arg declared_type='int*' name='mat_iterator' type='^i'/>
+<retval declared_type='int*' type='^i'/>
+</function>
+<function name='cvGetNormalizedCentralMoment'>
+<arg declared_type='int*' name='moments' type='^i'/>
+<arg declared_type='int' name='x_order' type='i'/>
+<arg declared_type='int' name='y_order' type='i'/>
+<retval declared_type='double' type='d'/>
+</function>
+<function name='cvGetPerspectiveTransform'>
+<arg const='true' declared_type='CvPoint2D32f*' name='src' type='^{CvPoint2D32f=ff}'/>
+<arg const='true' declared_type='CvPoint2D32f*' name='dst' type='^{CvPoint2D32f=ff}'/>
+<arg declared_type='CvMat*' name='map_matrix' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+<retval declared_type='CvMat*' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+</function>
+<function name='cvGetQuadrangleSubPix'>
+<arg const='true' declared_type='CvArr*' name='src' type='^v'/>
+<arg declared_type='CvArr*' name='dst' type='^v'/>
+<arg const='true' declared_type='CvMat*' name='map_matrix' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvGetRectSubPix'>
+<arg const='true' declared_type='CvArr*' name='src' type='^v'/>
+<arg declared_type='CvArr*' name='dst' type='^v'/>
+<arg declared_type='CvPoint2D32f' name='center' type='{CvPoint2D32f=ff}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function inline='true' name='cvGetRow'>
+<arg const='true' declared_type='int*' name='arr' type='^i'/>
+<arg declared_type='int*' name='submat' type='^i'/>
+<arg declared_type='int' name='row' type='i'/>
+<retval declared_type='int*' type='^i'/>
+</function>
+<function name='cvGetRows'>
+<retval declared_type='int' type='i'/>
+</function>
+<function inline='true' name='cvGetSetElem'>
+<arg const='true' declared_type='int*' name='set_header' type='^i'/>
+<arg declared_type='int' name='idx' type='i'/>
+<retval declared_type='int*' type='^i'/>
+</function>
+<function name='cvGetSpatialMoment'>
+<arg declared_type='int*' name='moments' type='^i'/>
+<arg declared_type='int' name='x_order' type='i'/>
+<arg declared_type='int' name='y_order' type='i'/>
+<retval declared_type='double' type='d'/>
+</function>
+<function name='cvGetTrackbarPos'>
+<arg const='true' declared_type='char*' name='trackbar_name' type='*'/>
+<arg const='true' declared_type='char*' name='window_name' type='*'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='cvGetWindowHandle'>
+<arg const='true' declared_type='char*' name='name' type='*'/>
+<retval declared_type='void*' type='^v'/>
+</function>
+<function name='cvGetWindowName'>
+<arg declared_type='void*' name='window_handle' type='^v'/>
+<retval const='true' declared_type='char*' type='*'/>
+</function>
+<function name='cvGetWindowProperty'>
+<arg const='true' declared_type='char*' name='name' type='*'/>
+<arg declared_type='int' name='prop_id' type='i'/>
+<retval declared_type='double' type='d'/>
+</function>
+<function name='cvGoodFeaturesToTrack'>
+<arg const='true' declared_type='CvArr*' name='image' type='^v'/>
+<arg declared_type='CvArr*' name='eig_image' type='^v'/>
+<arg declared_type='CvArr*' name='temp_image' type='^v'/>
+<arg declared_type='CvPoint2D32f*' name='corners' type='^{CvPoint2D32f=ff}'/>
+<arg declared_type='int*' name='corner_count' type='^i'/>
+<arg declared_type='double' name='quality_level' type='d'/>
+<arg declared_type='double' name='min_distance' type='d'/>
+<arg const='true' declared_type='CvArr*' name='mask' type='^v'/>
+<arg declared_type='int' name='block_size' type='i'/>
+<arg declared_type='int' name='use_harris' type='i'/>
+<arg declared_type='double' name='k' type='d'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvGrabFrame'>
+<arg declared_type='CvCapture*' name='capture' type='^{CvCapture=}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='cvHoughCircles'>
+<arg declared_type='CvArr*' name='image' type='^v'/>
+<arg declared_type='void*' name='circle_storage' type='^v'/>
+<arg declared_type='int' name='method' type='i'/>
+<arg declared_type='double' name='dp' type='d'/>
+<arg declared_type='double' name='min_dist' type='d'/>
+<arg declared_type='double' name='param1' type='d'/>
+<arg declared_type='double' name='param2' type='d'/>
+<arg declared_type='int' name='min_radius' type='i'/>
+<arg declared_type='int' name='max_radius' type='i'/>
+<retval declared_type='CvSeq*' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+</function>
+<function name='cvHoughLines2'>
+<arg declared_type='CvArr*' name='image' type='^v'/>
+<arg declared_type='void*' name='line_storage' type='^v'/>
+<arg declared_type='int' name='method' type='i'/>
+<arg declared_type='double' name='rho' type='d'/>
+<arg declared_type='double' name='theta' type='d'/>
+<arg declared_type='int' name='threshold' type='i'/>
+<arg declared_type='double' name='param1' type='d'/>
+<arg declared_type='double' name='param2' type='d'/>
+<retval declared_type='CvSeq*' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+</function>
+<function inline='true' name='cvIncRefData'>
+<arg declared_type='int*' name='arr' type='^i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='cvInitFont'>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='cvInitSystem'>
+<arg declared_type='int' name='argc' type='i'/>
+<arg declared_type='char**' name='argv' type='^*'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='cvInitUndistortMap'>
+<arg const='true' declared_type='CvMat*' name='camera_matrix' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+<arg const='true' declared_type='CvMat*' name='distortion_coeffs' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+<arg declared_type='CvArr*' name='mapx' type='^v'/>
+<arg declared_type='CvArr*' name='mapy' type='^v'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvInitUndistortRectifyMap'>
+<arg const='true' declared_type='CvMat*' name='camera_matrix' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+<arg const='true' declared_type='CvMat*' name='dist_coeffs' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+<arg const='true' declared_type='CvMat*' name='R' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+<arg const='true' declared_type='CvMat*' name='new_camera_matrix' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+<arg declared_type='CvArr*' name='mapx' type='^v'/>
+<arg declared_type='CvArr*' name='mapy' type='^v'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvInpaint'>
+<arg const='true' declared_type='CvArr*' name='src' type='^v'/>
+<arg const='true' declared_type='CvArr*' name='inpaint_mask' type='^v'/>
+<arg declared_type='CvArr*' name='dst' type='^v'/>
+<arg declared_type='double' name='inpaintRange' type='d'/>
+<arg declared_type='int' name='flags' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvIntegral'>
+<arg const='true' declared_type='CvArr*' name='image' type='^v'/>
+<arg declared_type='CvArr*' name='sum' type='^v'/>
+<arg declared_type='CvArr*' name='sqsum' type='^v'/>
+<arg declared_type='CvArr*' name='tilted_sum' type='^v'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function inline='true' name='cvIplDepth'>
+<arg declared_type='int' name='type' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function inline='true' name='cvIsInf'>
+<arg declared_type='double' name='value' type='d'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function inline='true' name='cvIsNaN'>
+<arg declared_type='double' name='value' type='d'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='cvLaplace'>
+<arg const='true' declared_type='CvArr*' name='src' type='^v'/>
+<arg declared_type='CvArr*' name='dst' type='^v'/>
+<arg declared_type='int' name='aperture_size' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvLinearPolar'>
+<arg const='true' declared_type='CvArr*' name='src' type='^v'/>
+<arg declared_type='CvArr*' name='dst' type='^v'/>
+<arg declared_type='CvPoint2D32f' name='center' type='{CvPoint2D32f=ff}'/>
+<arg declared_type='double' name='maxRadius' type='d'/>
+<arg declared_type='int' name='flags' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvLoadImage'>
+<arg const='true' declared_type='char*' name='filename' type='*'/>
+<arg declared_type='int' name='iscolor' type='i'/>
+<retval declared_type='IplImage*' type='^{_IplImage=iiiii[4c][4c]iiiii^{_IplROI}^{_IplImage}^v^{_IplTileInfo}i*i[4i][4i]*}'/>
+</function>
+<function name='cvLoadImageM'>
+<arg const='true' declared_type='char*' name='filename' type='*'/>
+<arg declared_type='int' name='iscolor' type='i'/>
+<retval declared_type='CvMat*' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+</function>
+<function name='cvLoadWindowParameters'>
+<arg const='true' declared_type='char*' name='name' type='*'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvLogPolar'>
+<arg const='true' declared_type='CvArr*' name='src' type='^v'/>
+<arg declared_type='CvArr*' name='dst' type='^v'/>
+<arg declared_type='CvPoint2D32f' name='center' type='{CvPoint2D32f=ff}'/>
+<arg declared_type='double' name='M' type='d'/>
+<arg declared_type='int' name='flags' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvMakeHistHeaderForArray'>
+<arg declared_type='int' name='dims' type='i'/>
+<arg declared_type='int*' name='sizes' type='^i'/>
+<arg declared_type='CvHistogram*' name='hist' type='^{CvHistogram=i^v[32[2f]]^^f{CvMatND=ii^ii(?=*^f^d^i^s)[32{?=ii}]}}'/>
+<arg declared_type='float*' name='data' type='^f'/>
+<arg declared_type='float**' name='ranges' type='^^f'/>
+<arg declared_type='int' name='uniform' type='i'/>
+<retval declared_type='CvHistogram*' type='^{CvHistogram=i^v[32[2f]]^^f{CvMatND=ii^ii(?=*^f^d^i^s)[32{?=ii}]}}'/>
+</function>
+<function inline='true' name='cvMat'>
+<arg declared_type='int' name='rows' type='i'/>
+<arg declared_type='int' name='cols' type='i'/>
+<arg declared_type='int' name='type' type='i'/>
+<arg declared_type='void*' name='data' type='^v'/>
+<retval declared_type='CvMat' type='{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+</function>
+<function name='cvMatchShapes'>
+<arg const='true' declared_type='void*' name='object1' type='^v'/>
+<arg const='true' declared_type='void*' name='object2' type='^v'/>
+<arg declared_type='int' name='method' type='i'/>
+<arg declared_type='double' name='parameter' type='d'/>
+<retval declared_type='double' type='d'/>
+</function>
+<function name='cvMatchTemplate'>
+<arg const='true' declared_type='CvArr*' name='image' type='^v'/>
+<arg const='true' declared_type='CvArr*' name='templ' type='^v'/>
+<arg declared_type='CvArr*' name='result' type='^v'/>
+<arg declared_type='int' name='method' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvMaxRect'>
+<arg const='true' declared_type='CvRect*' name='rect1' type='^{CvRect=iiii}'/>
+<arg const='true' declared_type='CvRect*' name='rect2' type='^{CvRect=iiii}'/>
+<retval declared_type='CvRect' type='{CvRect=iiii}'/>
+</function>
+<function name='cvMinAreaRect2'>
+<arg const='true' declared_type='CvArr*' name='points' type='^v'/>
+<arg declared_type='CvMemStorage*' name='storage' type='^{CvMemStorage=i^{CvMemBlock}^{CvMemBlock}^{CvMemStorage}ii}'/>
+<retval declared_type='CvBox2D' type='{CvBox2D={CvPoint2D32f=ff}{CvSize2D32f=ff}f}'/>
+</function>
+<function name='cvMinEnclosingCircle'>
+<arg const='true' declared_type='CvArr*' name='points' type='^v'/>
+<arg declared_type='CvPoint2D32f*' name='center' type='^{CvPoint2D32f=ff}'/>
+<arg declared_type='float*' name='radius' type='^f'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='cvMoments'>
+<arg const='true' declared_type='CvArr*' name='arr' type='^v'/>
+<arg declared_type='int*' name='moments' type='^i'/>
+<arg declared_type='int' name='binary' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvMorphologyEx'>
+<arg const='true' declared_type='CvArr*' name='src' type='^v'/>
+<arg declared_type='CvArr*' name='dst' type='^v'/>
+<arg declared_type='CvArr*' name='temp' type='^v'/>
+<arg declared_type='IplConvKernel*' name='element' type='^{_IplConvKernel=iiii^ii}'/>
+<arg declared_type='int' name='operation' type='i'/>
+<arg declared_type='int' name='iterations' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvMoveWindow'>
+<arg const='true' declared_type='char*' name='name' type='*'/>
+<arg declared_type='int' name='x' type='i'/>
+<arg declared_type='int' name='y' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvMultiplyAcc'>
+<arg const='true' declared_type='CvArr*' name='image1' type='^v'/>
+<arg const='true' declared_type='CvArr*' name='image2' type='^v'/>
+<arg declared_type='CvArr*' name='acc' type='^v'/>
+<arg const='true' declared_type='CvArr*' name='mask' type='^v'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvNamedWindow'>
+<arg const='true' declared_type='char*' name='name' type='*'/>
+<arg declared_type='int' name='flags' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='cvNormalizeHist'>
+<arg declared_type='CvHistogram*' name='hist' type='^{CvHistogram=i^v[32[2f]]^^f{CvMatND=ii^ii(?=*^f^d^i^s)[32{?=ii}]}}'/>
+<arg declared_type='double' name='factor' type='d'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function inline='true' name='cvPoint'>
+<arg declared_type='int' name='x' type='i'/>
+<arg declared_type='int' name='y' type='i'/>
+<retval declared_type='CvPoint' type='{CvPoint=ii}'/>
+</function>
+<function inline='true' name='cvPoint2D32f'>
+<arg declared_type='double' name='x' type='d'/>
+<arg declared_type='double' name='y' type='d'/>
+<retval declared_type='CvPoint2D32f' type='{CvPoint2D32f=ff}'/>
+</function>
+<function inline='true' name='cvPoint2D64f'>
+<arg declared_type='double' name='x' type='d'/>
+<arg declared_type='double' name='y' type='d'/>
+<retval declared_type='CvPoint2D64f' type='{CvPoint2D64f=dd}'/>
+</function>
+<function inline='true' name='cvPoint3D32f'>
+<arg declared_type='double' name='x' type='d'/>
+<arg declared_type='double' name='y' type='d'/>
+<arg declared_type='double' name='z' type='d'/>
+<retval declared_type='CvPoint3D32f' type='{CvPoint3D32f=fff}'/>
+</function>
+<function inline='true' name='cvPoint3D64f'>
+<arg declared_type='double' name='x' type='d'/>
+<arg declared_type='double' name='y' type='d'/>
+<arg declared_type='double' name='z' type='d'/>
+<retval declared_type='CvPoint3D64f' type='{CvPoint3D64f=ddd}'/>
+</function>
+<function inline='true' name='cvPointFrom32f'>
+<arg declared_type='CvPoint2D32f' name='point' type='{CvPoint2D32f=ff}'/>
+<retval declared_type='CvPoint' type='{CvPoint=ii}'/>
+</function>
+<function name='cvPointPolygonTest'>
+<arg const='true' declared_type='CvArr*' name='contour' type='^v'/>
+<arg declared_type='CvPoint2D32f' name='pt' type='{CvPoint2D32f=ff}'/>
+<arg declared_type='int' name='measure_dist' type='i'/>
+<retval declared_type='double' type='d'/>
+</function>
+<function name='cvPointSeqFromMat'>
+<arg declared_type='int' name='seq_kind' type='i'/>
+<arg const='true' declared_type='CvArr*' name='mat' type='^v'/>
+<arg declared_type='CvContour*' name='contour_header' type='^{CvContour=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}{CvRect=iiii}i[3i]}'/>
+<arg declared_type='CvSeqBlock*' name='block' type='^{CvSeqBlock=^{CvSeqBlock}^{CvSeqBlock}ii*}'/>
+<retval declared_type='CvSeq*' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+</function>
+<function inline='true' name='cvPointTo32f'>
+<arg declared_type='CvPoint' name='point' type='{CvPoint=ii}'/>
+<retval declared_type='CvPoint2D32f' type='{CvPoint2D32f=ff}'/>
+</function>
+<function name='cvPreCornerDetect'>
+<arg const='true' declared_type='CvArr*' name='image' type='^v'/>
+<arg declared_type='CvArr*' name='corners' type='^v'/>
+<arg declared_type='int' name='aperture_size' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvPyrDown'>
+<arg const='true' declared_type='CvArr*' name='src' type='^v'/>
+<arg declared_type='CvArr*' name='dst' type='^v'/>
+<arg declared_type='int' name='filter' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvPyrMeanShiftFiltering'>
+<arg const='true' declared_type='CvArr*' name='src' type='^v'/>
+<arg declared_type='CvArr*' name='dst' type='^v'/>
+<arg declared_type='double' name='sp' type='d'/>
+<arg declared_type='double' name='sr' type='d'/>
+<arg declared_type='int' name='max_level' type='i'/>
+<arg declared_type='CvTermCriteria' name='termcrit' type='{CvTermCriteria=iid}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvPyrUp'>
+<arg const='true' declared_type='CvArr*' name='src' type='^v'/>
+<arg declared_type='CvArr*' name='dst' type='^v'/>
+<arg declared_type='int' name='filter' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvQueryFrame'>
+<arg declared_type='CvCapture*' name='capture' type='^{CvCapture=}'/>
+<retval declared_type='IplImage*' type='^{_IplImage=iiiii[4c][4c]iiiii^{_IplROI}^{_IplImage}^v^{_IplTileInfo}i*i[4i][4i]*}'/>
+</function>
+<function inline='true' name='cvRNG'>
+<arg declared_type='int64' name='seed' type='q'/>
+<retval declared_type='CvRNG' type='Q'/>
+</function>
+<function inline='true' name='cvROIToRect'>
+<arg declared_type='IplROI' name='roi' type='{_IplROI=iiiii}'/>
+<retval declared_type='CvRect' type='{CvRect=iiii}'/>
+</function>
+<function inline='true' name='cvRandInt'>
+<arg declared_type='CvRNG*' name='rng' type='^Q'/>
+<retval declared_type='unsigned int' type='I'/>
+</function>
+<function inline='true' name='cvRandReal'>
+<arg declared_type='CvRNG*' name='rng' type='^Q'/>
+<retval declared_type='double' type='d'/>
+</function>
+<function name='cvRead'>
+<retval declared_type='int' type='i'/>
+</function>
+<function inline='true' name='cvReadByName'>
+<arg declared_type='int*' name='fs' type='^i'/>
+<arg const='true' declared_type='int*' name='map' type='^i'/>
+<arg const='true' declared_type='char*' name='name' type='*'/>
+<arg declared_type='int*' name='attributes' type='^i'/>
+<retval declared_type='void*' type='^v'/>
+</function>
+<function name='cvReadChainPoint'>
+<arg declared_type='int*' name='reader' type='^i'/>
+<retval declared_type='CvPoint' type='{CvPoint=ii}'/>
+</function>
+<function inline='true' name='cvReadInt'>
+<arg const='true' declared_type='int*' name='node' type='^i'/>
+<arg declared_type='int' name='default_value' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function inline='true' name='cvReadIntByName'>
+<arg const='true' declared_type='int*' name='fs' type='^i'/>
+<arg const='true' declared_type='int*' name='map' type='^i'/>
+<arg const='true' declared_type='char*' name='name' type='*'/>
+<arg declared_type='int' name='default_value' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function inline='true' name='cvReadReal'>
+<arg const='true' declared_type='int*' name='node' type='^i'/>
+<arg declared_type='double' name='default_value' type='d'/>
+<retval declared_type='double' type='d'/>
+</function>
+<function inline='true' name='cvReadRealByName'>
+<arg const='true' declared_type='int*' name='fs' type='^i'/>
+<arg const='true' declared_type='int*' name='map' type='^i'/>
+<arg const='true' declared_type='char*' name='name' type='*'/>
+<arg declared_type='double' name='default_value' type='d'/>
+<retval declared_type='double' type='d'/>
+</function>
+<function inline='true' name='cvReadString'>
+<arg const='true' declared_type='int*' name='node' type='^i'/>
+<arg const='true' declared_type='char*' name='default_value' type='*'/>
+<retval const='true' declared_type='char*' type='*'/>
+</function>
+<function inline='true' name='cvReadStringByName'>
+<arg const='true' declared_type='int*' name='fs' type='^i'/>
+<arg const='true' declared_type='int*' name='map' type='^i'/>
+<arg const='true' declared_type='char*' name='name' type='*'/>
+<arg const='true' declared_type='char*' name='default_value' type='*'/>
+<retval const='true' declared_type='char*' type='*'/>
+</function>
+<function inline='true' name='cvRealScalar'>
+<arg declared_type='double' name='val0' type='d'/>
+<retval declared_type='CvScalar' type='{CvScalar=[4d]}'/>
+</function>
+<function inline='true' name='cvRect'>
+<arg declared_type='int' name='x' type='i'/>
+<arg declared_type='int' name='y' type='i'/>
+<arg declared_type='int' name='width' type='i'/>
+<arg declared_type='int' name='height' type='i'/>
+<retval declared_type='CvRect' type='{CvRect=iiii}'/>
+</function>
+<function inline='true' name='cvRectToROI'>
+<arg declared_type='CvRect' name='rect' type='{CvRect=iiii}'/>
+<arg declared_type='int' name='coi' type='i'/>
+<retval declared_type='IplROI' type='{_IplROI=iiiii}'/>
+</function>
+<function name='cvReleaseCapture'>
+<arg declared_type='CvCapture**' name='capture' type='^^{CvCapture}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvReleaseHist'>
+<arg declared_type='CvHistogram**' name='hist' type='^^{CvHistogram}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvReleaseMat'>
+<retval declared_type='int' type='i'/>
+</function>
+<function inline='true' name='cvReleaseMatND'>
+<arg declared_type='int**' name='mat' type='^^i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvReleasePyramid'>
+<arg declared_type='CvMat***' name='pyramid' type='^^^{CvMat}'/>
+<arg declared_type='int' name='extra_layers' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvReleaseStructuringElement'>
+<arg declared_type='IplConvKernel**' name='element' type='^^{_IplConvKernel}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvReleaseVideoWriter'>
+<arg declared_type='CvVideoWriter**' name='writer' type='^^{CvVideoWriter}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvRemap'>
+<arg const='true' declared_type='CvArr*' name='src' type='^v'/>
+<arg declared_type='CvArr*' name='dst' type='^v'/>
+<arg const='true' declared_type='CvArr*' name='mapx' type='^v'/>
+<arg const='true' declared_type='CvArr*' name='mapy' type='^v'/>
+<arg declared_type='int' name='flags' type='i'/>
+<arg declared_type='CvScalar' name='fillval' type='{CvScalar=[4d]}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvResize'>
+<arg const='true' declared_type='CvArr*' name='src' type='^v'/>
+<arg declared_type='CvArr*' name='dst' type='^v'/>
+<arg declared_type='int' name='interpolation' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvResizeWindow'>
+<arg const='true' declared_type='char*' name='name' type='*'/>
+<arg declared_type='int' name='width' type='i'/>
+<arg declared_type='int' name='height' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvRetrieveFrame'>
+<arg declared_type='CvCapture*' name='capture' type='^{CvCapture=}'/>
+<arg declared_type='int' name='streamIdx' type='i'/>
+<retval declared_type='IplImage*' type='^{_IplImage=iiiii[4c][4c]iiiii^{_IplROI}^{_IplImage}^v^{_IplTileInfo}i*i[4i][4i]*}'/>
+</function>
+<function inline='true' name='cvRound'>
+<arg declared_type='double' name='value' type='d'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='cvRunningAvg'>
+<arg const='true' declared_type='CvArr*' name='image' type='^v'/>
+<arg declared_type='CvArr*' name='acc' type='^v'/>
+<arg declared_type='double' name='alpha' type='d'/>
+<arg const='true' declared_type='CvArr*' name='mask' type='^v'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvSampleLine'>
+<arg const='true' declared_type='CvArr*' name='image' type='^v'/>
+<arg declared_type='CvPoint' name='pt1' type='{CvPoint=ii}'/>
+<arg declared_type='CvPoint' name='pt2' type='{CvPoint=ii}'/>
+<arg declared_type='void*' name='buffer' type='^v'/>
+<arg declared_type='int' name='connectivity' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='cvSaveImage'>
+<arg const='true' declared_type='char*' name='filename' type='*'/>
+<arg const='true' declared_type='CvArr*' name='image' type='^v'/>
+<arg const='true' declared_type='int*' name='params' type='^i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='cvSaveWindowParameters'>
+<arg const='true' declared_type='char*' name='name' type='*'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function inline='true' name='cvScalar'>
+<arg declared_type='double' name='val0' type='d'/>
+<arg declared_type='double' name='val1' type='d'/>
+<arg declared_type='double' name='val2' type='d'/>
+<arg declared_type='double' name='val3' type='d'/>
+<retval declared_type='CvScalar' type='{CvScalar=[4d]}'/>
+</function>
+<function inline='true' name='cvScalarAll'>
+<arg declared_type='double' name='val0123' type='d'/>
+<retval declared_type='CvScalar' type='{CvScalar=[4d]}'/>
+</function>
+<function name='cvSeqSlice'>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='cvSetAdd'>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='cvSetCaptureProperty'>
+<arg declared_type='CvCapture*' name='capture' type='^{CvCapture=}'/>
+<arg declared_type='int' name='property_id' type='i'/>
+<arg declared_type='double' name='value' type='d'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='cvSetHistBinRanges'>
+<arg declared_type='CvHistogram*' name='hist' type='^{CvHistogram=i^v[32[2f]]^^f{CvMatND=ii^ii(?=*^f^d^i^s)[32{?=ii}]}}'/>
+<arg declared_type='float**' name='ranges' type='^^f'/>
+<arg declared_type='int' name='uniform' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvSetMouseCallback'>
+<arg const='true' declared_type='char*' name='window_name' type='*'/>
+<arg declared_type='CvMouseCallback' function_pointer='true' name='on_mouse' type='^?'>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='int' type='i'/>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg declared_type='void*' name='param' type='^v'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function inline='true' name='cvSetNew'>
+<arg declared_type='int*' name='set_header' type='^i'/>
+<retval declared_type='int*' type='^i'/>
+</function>
+<function name='cvSetOpenGlContext'>
+<arg const='true' declared_type='char*' name='window_name' type='*'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvSetOpenGlDrawCallback'>
+<arg const='true' declared_type='char*' name='window_name' type='*'/>
+<arg declared_type='CvOpenGlDrawCallback' function_pointer='true' name='callback' type='^?'>
+<arg declared_type='void*' type='^v'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg declared_type='void*' name='userdata' type='^v'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function inline='true' name='cvSetRemoveByPtr'>
+<arg declared_type='int*' name='set_header' type='^i'/>
+<arg declared_type='void*' name='elem' type='^v'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvSetTrackbarPos'>
+<arg const='true' declared_type='char*' name='trackbar_name' type='*'/>
+<arg const='true' declared_type='char*' name='window_name' type='*'/>
+<arg declared_type='int' name='pos' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvSetWindowProperty'>
+<arg const='true' declared_type='char*' name='name' type='*'/>
+<arg declared_type='int' name='prop_id' type='i'/>
+<arg declared_type='double' name='prop_value' type='d'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvShowImage'>
+<arg const='true' declared_type='char*' name='name' type='*'/>
+<arg const='true' declared_type='CvArr*' name='image' type='^v'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function inline='true' name='cvSize'>
+<arg declared_type='int' name='width' type='i'/>
+<arg declared_type='int' name='height' type='i'/>
+<retval declared_type='CvSize' type='{CvSize=ii}'/>
+</function>
+<function inline='true' name='cvSize2D32f'>
+<arg declared_type='double' name='width' type='d'/>
+<arg declared_type='double' name='height' type='d'/>
+<retval declared_type='CvSize2D32f' type='{CvSize2D32f=ff}'/>
+</function>
+<function inline='true' name='cvSlice'>
+<arg declared_type='int' name='start' type='i'/>
+<arg declared_type='int' name='end' type='i'/>
+<retval declared_type='CvSlice' type='{CvSlice=ii}'/>
+</function>
+<function name='cvSmooth'>
+<arg const='true' declared_type='CvArr*' name='src' type='^v'/>
+<arg declared_type='CvArr*' name='dst' type='^v'/>
+<arg declared_type='int' name='smoothtype' type='i'/>
+<arg declared_type='int' name='size1' type='i'/>
+<arg declared_type='int' name='size2' type='i'/>
+<arg declared_type='double' name='sigma1' type='d'/>
+<arg declared_type='double' name='sigma2' type='d'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvSobel'>
+<arg const='true' declared_type='CvArr*' name='src' type='^v'/>
+<arg declared_type='CvArr*' name='dst' type='^v'/>
+<arg declared_type='int' name='xorder' type='i'/>
+<arg declared_type='int' name='yorder' type='i'/>
+<arg declared_type='int' name='aperture_size' type='i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvSquareAcc'>
+<arg const='true' declared_type='CvArr*' name='image' type='^v'/>
+<arg declared_type='CvArr*' name='sqsum' type='^v'/>
+<arg const='true' declared_type='CvArr*' name='mask' type='^v'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvStartFindContours'>
+<arg declared_type='CvArr*' name='image' type='^v'/>
+<arg declared_type='CvMemStorage*' name='storage' type='^{CvMemStorage=i^{CvMemBlock}^{CvMemBlock}^{CvMemStorage}ii}'/>
+<arg declared_type='int' name='header_size' type='i'/>
+<arg declared_type='int' name='mode' type='i'/>
+<arg declared_type='int' name='method' type='i'/>
+<arg declared_type='CvPoint' name='offset' type='{CvPoint=ii}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='cvStartLoop'>
+<arg declared_type='int (*)(int, char **)' function_pointer='true' name='pt2Func' type='^?'>
+<arg declared_type='int' type='i'/>
+<arg declared_type='char**' type='^*'/>
+<retval declared_type='int' type='i'/>
+</arg>
+<arg declared_type='int' name='argc' type='i'/>
+<arg declared_type='char**' name='argv' type='^*'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='cvStartReadChainPoints'>
+<arg declared_type='CvChain*' name='chain' type='^{CvChain=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}{CvPoint=ii}}'/>
+<arg declared_type='int*' name='reader' type='^i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvStartWindowThread'>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='cvStopLoop'>
+<retval declared_type='void' type='v'/>
+</function>
+<function inline='true' name='cvSubS'>
+<arg const='true' declared_type='int*' name='src' type='^i'/>
+<arg declared_type='int' name='value' type='i'/>
+<arg declared_type='int*' name='dst' type='^i'/>
+<arg const='true' declared_type='int*' name='mask' type='^i'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvSubstituteContour'>
+<arg declared_type='int' name='scanner' type='i'/>
+<arg declared_type='CvSeq*' name='new_contour' type='^{CvSeq=ii^{CvSeq}^{CvSeq}^{CvSeq}^{CvSeq}ii**i^{CvMemStorage}^{CvSeqBlock}^{CvSeqBlock}}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function inline='true' name='cvTermCriteria'>
+<arg declared_type='int' name='type' type='i'/>
+<arg declared_type='int' name='max_iter' type='i'/>
+<arg declared_type='double' name='epsilon' type='d'/>
+<retval declared_type='CvTermCriteria' type='{CvTermCriteria=iid}'/>
+</function>
+<function name='cvThreshHist'>
+<arg declared_type='CvHistogram*' name='hist' type='^{CvHistogram=i^v[32[2f]]^^f{CvMatND=ii^ii(?=*^f^d^i^s)[32{?=ii}]}}'/>
+<arg declared_type='double' name='threshold' type='d'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvThreshold'>
+<arg const='true' declared_type='CvArr*' name='src' type='^v'/>
+<arg declared_type='CvArr*' name='dst' type='^v'/>
+<arg declared_type='double' name='threshold' type='d'/>
+<arg declared_type='double' name='max_value' type='d'/>
+<arg declared_type='int' name='threshold_type' type='i'/>
+<retval declared_type='double' type='d'/>
+</function>
+<function name='cvUndistort2'>
+<arg const='true' declared_type='CvArr*' name='src' type='^v'/>
+<arg declared_type='CvArr*' name='dst' type='^v'/>
+<arg const='true' declared_type='CvMat*' name='camera_matrix' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+<arg const='true' declared_type='CvMat*' name='distortion_coeffs' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+<arg const='true' declared_type='CvMat*' name='new_camera_matrix' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvUndistortPoints'>
+<arg const='true' declared_type='CvMat*' name='src' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+<arg declared_type='CvMat*' name='dst' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+<arg const='true' declared_type='CvMat*' name='camera_matrix' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+<arg const='true' declared_type='CvMat*' name='dist_coeffs' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+<arg const='true' declared_type='CvMat*' name='R' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+<arg const='true' declared_type='CvMat*' name='P' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvUpdateWindow'>
+<arg const='true' declared_type='char*' name='window_name' type='*'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvWaitKey'>
+<arg declared_type='int' name='delay' type='i'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function name='cvWarpAffine'>
+<arg const='true' declared_type='CvArr*' name='src' type='^v'/>
+<arg declared_type='CvArr*' name='dst' type='^v'/>
+<arg const='true' declared_type='CvMat*' name='map_matrix' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+<arg declared_type='int' name='flags' type='i'/>
+<arg declared_type='CvScalar' name='fillval' type='{CvScalar=[4d]}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvWarpPerspective'>
+<arg const='true' declared_type='CvArr*' name='src' type='^v'/>
+<arg declared_type='CvArr*' name='dst' type='^v'/>
+<arg const='true' declared_type='CvMat*' name='map_matrix' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+<arg declared_type='int' name='flags' type='i'/>
+<arg declared_type='CvScalar' name='fillval' type='{CvScalar=[4d]}'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvWatershed'>
+<arg const='true' declared_type='CvArr*' name='image' type='^v'/>
+<arg declared_type='CvArr*' name='markers' type='^v'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function name='cvWriteFrame'>
+<arg declared_type='CvVideoWriter*' name='writer' type='^{CvVideoWriter=}'/>
+<arg const='true' declared_type='IplImage*' name='image' type='^{_IplImage=iiiii[4c][4c]iiiii^{_IplROI}^{_IplImage}^v^{_IplTileInfo}i*i[4i][4i]*}'/>
+<retval declared_type='int' type='i'/>
+</function>
+<function inline='true' name='cvmGet'>
+<arg const='true' declared_type='CvMat*' name='mat' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+<arg declared_type='int' name='row' type='i'/>
+<arg declared_type='int' name='col' type='i'/>
+<retval declared_type='double' type='d'/>
+</function>
+<function inline='true' name='cvmSet'>
+<arg declared_type='CvMat*' name='mat' type='^{CvMat=ii^ii(?=*^s^i^f^d)ii}'/>
+<arg declared_type='int' name='row' type='i'/>
+<arg declared_type='int' name='col' type='i'/>
+<arg declared_type='double' name='value' type='d'/>
+<retval declared_type='void' type='v'/>
+</function>
+<function_alias name='cvCaptureFromAVI' original='cvCreateFileCapture'/>
+<function_alias name='cvCaptureFromCAM' original='cvCreateCameraCapture'/>
+<function_alias name='cvCaptureFromFile' original='cvCreateFileCapture'/>
+<function_alias name='cvCreateAVIWriter' original='cvCreateVideoWriter'/>
+<function_alias name='cvDrawEllipse' original='cvEllipse'/>
+<function_alias name='cvWriteToAVI' original='cvWriteFrame'/>
+<function_alias name='cvvConvertImage' original='cvConvertImage'/>
+<function_alias name='cvvCreateTrackbar' original='cvCreateTrackbar'/>
+<function_alias name='cvvDestroyWindow' original='cvDestroyWindow'/>
+<function_alias name='cvvInitSystem' original='cvInitSystem'/>
+<function_alias name='cvvNamedWindow' original='cvNamedWindow'/>
+<function_alias name='cvvResizeWindow' original='cvResizeWindow'/>
+<function_alias name='cvvSaveImage' original='cvSaveImage'/>
+<function_alias name='cvvShowImage' original='cvShowImage'/>
+<class name='CvAbstractCamera'>
+<method selector='captureSession'>
+<retval declared_type='AVCaptureSession*' type='@'/>
+</method>
+<method selector='captureSessionLoaded'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='createCaptureOutput'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='createVideoPreviewLayer'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='defaultAVCaptureDevicePosition'>
+<retval declared_type='AVCaptureDevicePosition' type='i' type64='q'/>
+</method>
+<method selector='defaultAVCaptureSessionPreset'>
+<retval const='true' declared_type='NSString*' type='@'/>
+</method>
+<method selector='defaultAVCaptureVideoOrientation'>
+<retval declared_type='AVCaptureVideoOrientation' type='i' type64='q'/>
+</method>
+<method selector='defaultFPS'>
+<retval declared_type='int' type='i'/>
+</method>
+<method selector='imageHeight'>
+<retval declared_type='int' type='i'/>
+</method>
+<method selector='imageWidth'>
+<retval declared_type='int' type='i'/>
+</method>
+<method selector='initWithParentView:'>
+<arg declared_type='UIView*' index='0' name='parent' type='@'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='lockBalance'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lockExposure'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='lockFocus'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='parentView'>
+<retval declared_type='UIView*' type='@'/>
+</method>
+<method selector='running'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setCaptureSession:'>
+<arg declared_type='AVCaptureSession*' index='0' name='captureSession' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDefaultAVCaptureDevicePosition:'>
+<arg declared_type='AVCaptureDevicePosition' index='0' name='defaultAVCaptureDevicePosition' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDefaultAVCaptureSessionPreset:'>
+<arg const='true' declared_type='NSString*' index='0' name='defaultAVCaptureSessionPreset' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDefaultAVCaptureVideoOrientation:'>
+<arg declared_type='AVCaptureVideoOrientation' index='0' name='defaultAVCaptureVideoOrientation' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDefaultFPS:'>
+<arg declared_type='int' index='0' name='defaultFPS' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageHeight:'>
+<arg declared_type='int' index='0' name='imageHeight' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageWidth:'>
+<arg declared_type='int' index='0' name='imageWidth' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setParentView:'>
+<arg declared_type='UIView*' index='0' name='parentView' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUseAVCaptureVideoPreviewLayer:'>
+<arg declared_type='BOOL' index='0' name='useAVCaptureVideoPreviewLayer' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setVideoCaptureConnection:'>
+<arg declared_type='AVCaptureConnection*' index='0' name='videoCaptureConnection' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='start'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='stop'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='switchCameras'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='unlockBalance'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='unlockExposure'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='unlockFocus'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='updateOrientation'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='useAVCaptureVideoPreviewLayer'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='videoCaptureConnection'>
+<retval declared_type='AVCaptureConnection*' type='@'/>
+</method>
+</class>
+<class name='CvPhotoCamera'>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='takePicture'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CvVideoCamera'>
+<method selector='adjustLayoutToInterfaceOrientation:'>
+<arg declared_type='UIInterfaceOrientation' index='0' name='interfaceOrientation' type='i' type64='q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='grayscaleMode'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='layoutPreviewLayer'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='recordAssetWriter'>
+<retval declared_type='AVAssetWriter*' type='@'/>
+</method>
+<method selector='recordAssetWriterInput'>
+<retval declared_type='AVAssetWriterInput*' type='@'/>
+</method>
+<method selector='recordPixelBufferAdaptor'>
+<retval declared_type='AVAssetWriterInputPixelBufferAdaptor*' type='@'/>
+</method>
+<method selector='recordVideo'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='rotateVideo'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='saveVideo'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGrayscaleMode:'>
+<arg declared_type='BOOL' index='0' name='grayscaleMode' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRecordAssetWriter:'>
+<arg declared_type='AVAssetWriter*' index='0' name='recordAssetWriter' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRecordAssetWriterInput:'>
+<arg declared_type='AVAssetWriterInput*' index='0' name='recordAssetWriterInput' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRecordPixelBufferAdaptor:'>
+<arg declared_type='AVAssetWriterInputPixelBufferAdaptor*' index='0' name='recordPixelBufferAdaptor' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRecordVideo:'>
+<arg declared_type='BOOL' index='0' name='recordVideo' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRotateVideo:'>
+<arg declared_type='BOOL' index='0' name='rotateVideo' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='videoFileURL'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='photoCamera:capturedImage:'>
+<arg declared_type='CvPhotoCamera*' index='0' name='photoCamera' type='@'/>
+<arg declared_type='UIImage*' index='1' name='image' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='photoCameraCancel:'>
+<arg declared_type='CvPhotoCamera*' index='0' name='photoCamera' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<informal_protocol name='CvPhotoCameraDelegate'>
+<method selector='photoCamera:capturedImage:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='CvPhotoCamera*' index='0' name='photoCamera' type='@'/>
+<arg declared_type='UIImage*' index='1' name='image' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='photoCameraCancel:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='CvPhotoCamera*' index='0' name='photoCamera' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+</signatures>

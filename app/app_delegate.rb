@@ -6,5 +6,4 @@ class AppDelegate < PM::Delegate
     return true if RUBYMOTION_ENV == "test"
     open InvoiceShotScreen.new(nav_bar: true)
   end
-
 end

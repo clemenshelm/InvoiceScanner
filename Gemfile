@@ -14,6 +14,11 @@ gem "motion-kit", "~> 0.10"
 # Cool vector magic
 gem 'vector2d', '~> 2.0.2'
 
+# CocoaPods
+gem 'motion-cocoapods'
+# gem 'rubymotion_generators'
+gem 'cocoapods'
+
 # Front end toolkit
 # gem "ruby_motion_query", "~> 0.5"
 
