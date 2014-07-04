@@ -23,5 +23,6 @@ class InvoiceShotScreen < PM::Screen
 
   def crop
     PM.logger.info "Cropping invoice"
+    open ResultScreen
   end
 end
