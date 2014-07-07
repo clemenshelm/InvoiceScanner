@@ -22,7 +22,13 @@ class InvoiceShotScreen < PM::Screen
   end
 
   def crop
-    PerspectiveCorrection.alloc.initWithImage @layout.get(:invoice_image).image
+    perspectiveCorrection = PerspectiveCorrection.alloc.initWithImage @layout.get(:invoice_image).image
+    # TODO: This is ObjectiveC weirdness. Release your perfect Ruby world from it!
+    points = [[0, 0], [100, 0], [0, 100], [100, 100]].map do |point|
+      cgpoint = CGPoint.new(*point)
+      NSValue.valueWithCGPoint cgpoint
+    end
+    correctedImage = perspectiveCorrection.correctFromCorners points
     PM.logger.info "Cropping invoice"
   end
 end

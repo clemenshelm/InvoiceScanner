@@ -15,7 +15,7 @@ gem "motion-kit", "~> 0.10"
 gem 'vector2d', '~> 2.0.2'
 
 # CocoaPods
-gem 'motion-cocoapods'
+gem 'motion-cocoapods', github: "HipByte/motion-cocoapods", ref: "38fa423"
 # gem 'rubymotion_generators'
 gem 'cocoapods'
 
