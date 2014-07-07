@@ -3,7 +3,7 @@ source "https://rubygems.org"
 gem "rake"
 
 # Screens
-gem "ProMotion", "2.0.0.rc3"
+gem "ProMotion", "2.0.0.rc4"
 
 # Awesome gem that adds a ton of helpers.
 gem "sugarcube", require: ["sugarcube", "sugarcube-color", "sugarcube-uikit", "sugarcube-events", "sugarcube-repl", "sugarcube-constants"]

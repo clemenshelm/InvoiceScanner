@@ -9,7 +9,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    ProMotion (2.0.0.rc3)
+    ProMotion (2.0.0.rc4)
       methadone (~> 1.4)
     activesupport (3.2.19)
       i18n (~> 0.6, >= 0.6.4)
@@ -67,7 +67,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  ProMotion (= 2.0.0.rc3)
+  ProMotion (= 2.0.0.rc4)
   cocoapods
   motion-cocoapods!
   motion-kit (~> 0.10)
