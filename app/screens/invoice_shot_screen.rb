@@ -30,5 +30,6 @@ class InvoiceShotScreen < PM::Screen
     end
     correctedImage = perspectiveCorrection.correctFromCorners points
     PM.logger.info "Cropping invoice"
+    open ResultScreen
   end
 end
