@@ -7,6 +7,7 @@ class InvoiceShotScreen < PM::Screen
     @layout = InvoiceShotLayout.new(root: self.view).build
 
     @layout.pins.each do |pin|
+      PM.logger.debug "setting pin listener for pin #{pin}"
       pin.on(:touch_drag_inside, :touch_drag_outside) do |pin, event|
         touch = event.allTouches.anyObject
         pin.center = touch.locationInView(view)
@@ -23,13 +24,21 @@ class InvoiceShotScreen < PM::Screen
 
   def crop
     perspectiveCorrection = PerspectiveCorrection.alloc.initWithImage @layout.get(:invoice_image).image
-    # TODO: This is ObjectiveC weirdness. Release your perfect Ruby world from it!
-    points = [[0, 0], [100, 0], [0, 100], [100, 100]].map do |point|
-      cgpoint = CGPoint.new(*point)
-      NSValue.valueWithCGPoint cgpoint
+    correctedImage = perspectiveCorrection.correctFromCorners pin_positions_in_image_coordinates
+    open ResultScreen.new(image: correctedImage)
+  end
+
+  private
+
+  def pin_positions_in_image_coordinates
+    quad_size = @layout.get(:quad).bounds.size
+    image_size = @layout.get(:invoice_image).image.size
+
+    image_quad_height_ratio = Rational(image_size.height, quad_size.height.to_f)
+    image_left_x = @layout.get(:invoice_image).frame.origin.x
+
+    @layout.pins.map(&:center).map do |cgpoint|
+      [(cgpoint.x - image_left_x) * image_quad_height_ratio, cgpoint.y * image_quad_height_ratio]
     end
-    correctedImage = perspectiveCorrection.correctFromCorners points
-    PM.logger.info "Cropping invoice"
-    open ResultScreen
   end
 end

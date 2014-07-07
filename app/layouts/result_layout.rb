@@ -1,8 +1,15 @@
 class ResultLayout < MK::Layout
-  attr_writer :lines
+  attr_writer :lines, :image
 
   def layout
+    add UIImageView, :invoice_image
     @lines.each_with_index &method(:add_line)
+  end
+
+  def invoice_image_style
+    image @image
+    size [:scale, '100%']
+    center ["50%", "50%"]
   end
 
   private
