@@ -50,7 +50,7 @@ GEM
     json_pure (1.8.1)
     methadone (1.4.0)
       bundler
-    motion-kit (0.10.8)
+    motion-kit (0.10.9)
       dbt (~> 1.1.5)
     multi_json (1.10.1)
     nap (0.8.0)
