@@ -19,6 +19,9 @@ gem 'motion-cocoapods', github: "HipByte/motion-cocoapods", ref: "38fa423"
 # gem 'rubymotion_generators'
 gem 'cocoapods'
 
+# Tesseract for OCR
+gem 'motion-ocr', github: "clemenshelm/motion-ocr"
+
 # Front end toolkit
 # gem "ruby_motion_query", "~> 0.5"
 

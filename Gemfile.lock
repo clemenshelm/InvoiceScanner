@@ -6,6 +6,12 @@ GIT
     motion-cocoapods (1.5.0)
       cocoapods (>= 0.32.1)
 
+GIT
+  remote: git://github.com/clemenshelm/motion-ocr.git
+  revision: 9eedb9f1befd20e8d50e8d79f04d0f0f926a7a2f
+  specs:
+    motion-ocr (0.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -71,6 +77,7 @@ DEPENDENCIES
   cocoapods
   motion-cocoapods!
   motion-kit (~> 0.10)
+  motion-ocr!
   rake
   sugarcube
   vector2d (~> 2.0.2)

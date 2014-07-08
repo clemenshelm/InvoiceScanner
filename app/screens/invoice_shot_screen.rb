@@ -25,6 +25,8 @@ class InvoiceShotScreen < PM::Screen
   def crop
     perspectiveCorrection = PerspectiveCorrection.alloc.initWithImage @layout.get(:invoice_image).image
     correctedImage = perspectiveCorrection.correctFromCorners pin_positions_in_image_coordinates
+    hocr = section_with_tesseract correctedImage
+    PM.logger.debug hocr
     open ResultScreen.new(image: correctedImage)
   end
 
@@ -40,5 +42,20 @@ class InvoiceShotScreen < PM::Screen
     @layout.pins.map(&:center).map do |cgpoint|
       [(cgpoint.x - image_left_x) * image_quad_height_ratio, cgpoint.y * image_quad_height_ratio]
     end
+  end
+
+  def section_with_tesseract(image)
+    ocr = Motion::OCR.new language: "deu"
+    ocr.scan image.CGImage, format: :hocr
+
+    # tesseract = Tesseract.alloc.initWithLanguage "deu"
+    # tesseract.setVariableValue "0123456789aäbcdefghijklmnoöpqrsßtuüvwxyzAÄBCDEFGHIJKLMNOÖPQRSTUÜVWXYZ.-+()/@*,€!", forKey:"tessedit_char_whitelist"
+    # tesseract.setImage image
+    # tesseract.recognize
+    #
+    # hocr = tesseract.getHOCRText
+    # tesseract.clear
+    #
+    # HOCRLineParser.parseHOCR hocr
   end
 end
