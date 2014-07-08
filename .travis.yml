@@ -3,5 +3,5 @@ before_install:
   - sudo chown -R travis ~/Library/RubyMotion
   - mkdir -p ~/Library/RubyMotion/build
   - sudo motion update
-install:
+  - gem install motion-cocoapods --no-rdoc --no-ri --no-document --quiet
   - bundle exec rake pod:install
