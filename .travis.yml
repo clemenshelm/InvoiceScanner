@@ -4,4 +4,4 @@ before_install:
   - mkdir -p ~/Library/RubyMotion/build
   - sudo motion update
   - bundle install
-  - bundle exec rake pod:install
+  - bundle exec rake pod:install | grep \.podspec -v
