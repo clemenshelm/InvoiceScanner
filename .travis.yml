@@ -3,3 +3,4 @@ before_install:
   - sudo chown -R travis ~/Library/RubyMotion
   - mkdir -p ~/Library/RubyMotion/build
   - sudo motion update
+  - bundle exec rake pod:install
