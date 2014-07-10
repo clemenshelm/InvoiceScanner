@@ -19,6 +19,7 @@
     self.distortedMat = [distortedImage CVMat];
     self.resultWidth = self.distortedMat.cols;
     self.resultHeight = self.resultWidth * sqrt(2);
+    NSLog(@"width: %i, height: %i, sqrt: %f", self.resultWidth, self.resultHeight, sqrt(2));
     // TODO: Use A4 format instead
     self.documentCorners = new cv::Point2f[4];
     self.documentCorners[0].x = 0;                      self.documentCorners[0].y = 0;
@@ -44,7 +45,7 @@
   NSLog(@"A4 width: %i, height: %i", self.resultWidth, self.resultHeight);
   cv::Mat perspectiveMat = cv::getPerspectiveTransform(distortedCorners, self.documentCorners);
   cv::Mat resultImageMat;
-  cv::warpPerspective(self.distortedMat, resultImageMat, perspectiveMat, self.distortedMat.size());
+  cv::warpPerspective(self.distortedMat, resultImageMat, perspectiveMat, cv::Size2f(self.resultWidth, self.resultHeight));
   cv::Rect roi = cv::Rect(0, 0, self.resultWidth, self.resultHeight);
   cv::Mat(resultImageMat, roi); // crop result to A4 format
   return [UIImage imageWithCVMat:resultImageMat];
