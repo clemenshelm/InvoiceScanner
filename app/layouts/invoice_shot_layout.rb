@@ -1,4 +1,6 @@
 class InvoiceShotLayout < MK::Layout
+  include FullscreenWithNavbar
+
   PIN_POSITIONS = [
     [100, 150], [650, 150], [100, 900], [650, 900]
   ]
@@ -18,11 +20,11 @@ class InvoiceShotLayout < MK::Layout
 
   def invoice_image_style
     image "invoice_easybill.jpg".uiimage
-    size [:scale, '100%']
-    center ["50%", "50%"]
+    fullscreen_below_navbar width: :scale
   end
 
   def quad_style
+    fullscreen_below_navbar
     size ["100%", "100%"]
     background_color UIColor.clearColor
   end

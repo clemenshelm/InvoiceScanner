@@ -1,4 +1,5 @@
 class ResultLayout < MK::Layout
+  include FullscreenWithNavbar
   attr_writer :lines, :image
 
   def layout
@@ -8,8 +9,7 @@ class ResultLayout < MK::Layout
 
   def invoice_image_style
     image @image
-    size [:scale, '100%']
-    center ["50%", "50%"]
+    fullscreen_below_navbar width: :scale
   end
 
   private
