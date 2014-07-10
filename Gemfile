@@ -22,6 +22,14 @@ gem 'cocoapods'
 # Tesseract for OCR
 gem 'motion-ocr', github: "clemenshelm/motion-ocr"
 
+# XML parser for wakizashi
+gem 'wakizashi', github: "clemenshelm/wakizashi"
+
+# Better test execution
+gem 'motion-redgreen'
+gem 'guard'
+gem 'guard-test'
+
 # Front end toolkit
 # gem "ruby_motion_query", "~> 0.5"
 

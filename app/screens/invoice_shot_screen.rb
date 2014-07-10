@@ -25,9 +25,8 @@ class InvoiceShotScreen < PM::Screen
   def crop
     perspectiveCorrection = PerspectiveCorrection.alloc.initWithImage @layout.get(:invoice_image).image
     correctedImage = perspectiveCorrection.correctFromCorners pin_positions_in_image_coordinates
-    hocr = section_with_tesseract correctedImage
-    PM.logger.debug hocr
-    open ResultScreen.new(image: correctedImage)
+    lines = section_with_tesseract correctedImage
+    open ResultScreen.new(image: correctedImage, lines: lines)
   end
 
   private
@@ -46,7 +45,18 @@ class InvoiceShotScreen < PM::Screen
 
   def section_with_tesseract(image)
     ocr = Motion::OCR.new language: "deu"
-    ocr.scan image.CGImage, format: :hocr
+    hocr = ocr.scan image.CGImage, format: :hocr
+    # PM.logger.debug hocr
+    Wakizashi::HTML(hocr).xpath("//*[@class='ocr_line']").map do |lineNode|
+      line = TextLine.new coordinates_of(lineNode)
+
+      lineNode.xpath("//*[@class='ocr_word']").each do |wordBoxNode|
+        text = wordBoxNode.xpath("//*[@class='ocrx_word']").to_s
+        line.words << TextWord.new(coordinates_of(wordBoxNode).merge(text: text))
+      end
+
+      line
+    end
 
     # tesseract = Tesseract.alloc.initWithLanguage "deu"
     # tesseract.setVariableValue "0123456789aäbcdefghijklmnoöpqrsßtuüvwxyzAÄBCDEFGHIJKLMNOÖPQRSTUÜVWXYZ.-+()/@*,€!", forKey:"tessedit_char_whitelist"
@@ -57,5 +67,10 @@ class InvoiceShotScreen < PM::Screen
     # tesseract.clear
     #
     # HOCRLineParser.parseHOCR hocr
+  end
+
+  def coordinates_of(node)
+    coords = node[:title].split(' ')[1..4].map(&:to_i)
+    {top_left: coords[0..1], bottom_right: coords[2..3]}
   end
 end

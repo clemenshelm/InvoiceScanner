@@ -15,6 +15,7 @@ Motion::Project::App.setup do |app|
 
   app.pods do
     pod 'OpenCV'
+    pod 'GDataXML-HTML' # required by wakizashi
   end
 
   app.vendor_project('vendor/OpenMotionCV', :static, cflags: '-I../Pods/Headers/OpenCV')
