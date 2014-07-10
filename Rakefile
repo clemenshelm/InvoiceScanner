@@ -6,6 +6,8 @@ require "rubygems"
 require 'bundler'
 Bundler.require
 
+require 'motion-ocr'
+
 Motion::Project::App.setup do |app|
   # Use `rake config' to see complete project settings.
   app.name = 'InvoiceScanner'
@@ -13,6 +15,7 @@ Motion::Project::App.setup do |app|
 
   app.pods do
     pod 'OpenCV'
+    pod 'GDataXML-HTML' # required by wakizashi
   end
 
   app.vendor_project('vendor/OpenMotionCV', :static, cflags: '-I../Pods/Headers/OpenCV')

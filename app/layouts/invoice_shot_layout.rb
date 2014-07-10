@@ -1,29 +1,19 @@
 class InvoiceShotLayout < MK::Layout
-  PIN_POSITIONS = [
-    [100, 150], [650, 150], [100, 900], [650, 900]
-  ]
-
+  include FullscreenWithNavbar
   attr_reader :pins
 
   def layout
     add UIImageView, :invoice_image
     add QuadView, :quad
-    @pins = PIN_POSITIONS.each_with_index.map do |position, index|
-      add UIButton, "pin#{index}" do
-        frame [position, [20, 20]]
-        background_color QuadView::COLOR
-      end
-    end
   end
 
   def invoice_image_style
     image "invoice_easybill.jpg".uiimage
-    size [:scale, '100%']
-    center ["50%", "50%"]
+    fullscreen_below_navbar width: :scale
   end
 
   def quad_style
-    size ["100%", "100%"]
+    fullscreen_below_navbar
     background_color UIColor.clearColor
   end
 end
