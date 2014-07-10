@@ -28,7 +28,7 @@ class ResultLayout < MK::Layout
   def add_line(line, index)
     line_view = add UIView, "line#{index}" do
       frame fit_frame(line.frame)
-      backgroundColor "#CC0000".uicolor
+      backgroundColor "#CC0000".uicolor(0.3)
 
       line.words.each_with_index { |word, i| add_word word, i, line_view}
     end
@@ -37,7 +37,7 @@ class ResultLayout < MK::Layout
   def add_word(word, index, line_view)
     add UIView, "word#{index}" do
       frame fit_frame(word.frame)
-      backgroundColor "#00CC00".uicolor
+      backgroundColor "#00CC00".uicolor(0.3)
     end
   end
 end
