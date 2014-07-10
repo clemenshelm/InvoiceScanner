@@ -40,6 +40,11 @@ class InvoiceShotScreen < PM::Screen
         line.words << TextWord.new(coordinates_of(wordBoxNode).merge(text: text))
       end
 
+      # Make word frames relative to line position
+      line.words.each do |word|
+        word.frame[0] = (Vector[*word.frame[0]] - Vector[*line.frame[0]]).to_a
+      end
+
       line
     end
 

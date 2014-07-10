@@ -3,8 +3,11 @@ class ResultLayout < MK::Layout
   attr_writer :lines, :image
 
   def layout
-    add UIImageView, :invoice_image
-    @lines.each_with_index &method(:add_line)
+    @image_view = add UIImageView, :invoice_image
+    add UIView, :line_canvas do
+      fullscreen_below_navbar width: @image_view.frame.size.width
+      @lines.each_with_index &method(:add_line)
+    end
   end
 
   def invoice_image_style
@@ -14,9 +17,17 @@ class ResultLayout < MK::Layout
 
   private
 
+  def image_scaling_factor
+    @image_scaling ||=  @image.width / @image_view.frame.size.width.to_f
+  end
+
+  def fit_frame(frame)
+    frame.map { |array| Vector[*array] / image_scaling_factor }.map(&:to_a)
+  end
+
   def add_line(line, index)
     line_view = add UIView, "line#{index}" do
-      frame line.frame
+      frame fit_frame(line.frame)
       backgroundColor "#CC0000".uicolor
 
       line.words.each_with_index { |word, i| add_word word, i, line_view}
@@ -25,7 +36,7 @@ class ResultLayout < MK::Layout
 
   def add_word(word, index, line_view)
     add UIView, "word#{index}" do
-      frame word.frame
+      frame fit_frame(word.frame)
       backgroundColor "#00CC00".uicolor
     end
   end
